@@ -28,9 +28,6 @@ cat << EOF > /usr/local/etc/xray/config.json
             },
             "streamSettings": {
                 "network": "ws"
-                "wsSettings": {
-                  "path": "/$ID-trojan"
-                }
             }
         }
     ],
