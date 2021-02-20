@@ -16,7 +16,7 @@ Deploy VLESS server to heroku
 | `Flow` | xtls-rprx-direct |
 | `encryption` | none |
 | `Transport` | ws |
-| `Tls` | Tls must open, Otherwise you will be disconnected |
+| `Tls` | Tls must open, otherwise you will be disconnected |
 
 # Client Ws+Tls+Xtls-rprx-direct(Flow) Support Status
 
