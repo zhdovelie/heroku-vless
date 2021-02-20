@@ -5,23 +5,23 @@ Deploy VLESS server to heroku
 
 | Connection Variables | Values |
 | -------------------- | ------ |
-| Address | yourAppName.herokuapp.com </br> Cloudflare Reverse Proxy Address |
-| SNI | Same of Address |
-| AllowInsecure | false |
-| Port | 443 |
-| Path | /$ID-vless |
-| id | Use UUID Generator |
-| Flow | xtls-rprx-direct |
-| encryption | none |
-| Transport | ws |
-| Security | tls |
+| `Address` | yourAppName.herokuapp.com </br> Cloudflare Reverse Proxy Address |
+| `SNI` | Same of Address |
+| `AllowInsecure` | false |
+| `Port` | 443 |
+| `Path` | /$ID-vless |
+| `id` | Use UUID Generator |
+| `Flow` | xtls-rprx-direct |
+| `encryption` | none |
+| `Transport` | ws |
+| `Security` | tls |
 
 | ws+tls+flow supported | success | failed |
 | --------------------- | ------- | ------ |
-| 2dust/v2rayn/v2rayng  | yes | - |
-| openwrt ssrplus | - | yes |
-| openwrt passwall | - | yes |
-| QV2Ray | n/a | n/a |
+| `2dust/v2rayn/v2rayng` | yes | - |
+| `Openwrt ssrplus` | - | yes |
+| `Openwrt passwall` | - | yes |
+| `QV2Ray` | n/a | n/a |
 
 Cloudflare Reverse Proxy Code
 ```
