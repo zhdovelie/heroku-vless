@@ -30,6 +30,7 @@ cat << EOF > /usr/local/etc/xray/config.json
             },
             "streamSettings": {
                 "network": "ws",
+                "allowInsecure": false,
                 "wsSettings": {
                   "path": "/$ID-vless"
                 }
