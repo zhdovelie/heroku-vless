@@ -9,13 +9,13 @@ install -m 755 /tmp/xray/xray /usr/local/bin/xray
 # Remove temporary directory
 rm -rf /tmp/xray
 
-# V2Ray new configuration
+# XRay new configuration
 install -d /usr/local/etc/xray
 cat << EOF > /usr/local/etc/xray/config.json
 {
     "inbounds": [
         {
-            "port": 8080,
+            "port": $PORT,
             "protocol": "trojan",
             "settings": {
                 "clients": [
