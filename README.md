@@ -56,8 +56,8 @@ addEventListener(
 
 # Acknowledgments
 
--[Project V](https://github.com/v2ray/v2ray-core.git)
--[Project X](https://github.com/XTLS/Xray-core.git)
--[HeroKu](https://heroku.com)
--[heroku-vless](https://github.com/DanyTPG/heroku-vless.git)
--[Better Cloudflare IP](https://github.com/XIU2/CloudflareSpeedTest.git)
+- [Project V](https://github.com/v2ray/v2ray-core.git)
+- [Project X](https://github.com/XTLS/Xray-core.git)
+- [HeroKu](https://heroku.com)
+- [heroku-vless](https://github.com/DanyTPG/heroku-vless.git)
+- [Better Cloudflare IP](https://github.com/XIU2/CloudflareSpeedTest.git)
