@@ -1,13 +1,14 @@
 {
-    "name": "XRay Trojan",
-    "description": "Deploy Xray Trojan on Heroku.",
-    "keywords": ["Trojan"],
+    "name": "XRay VLESS",
+    "description": "Deploy Xray VLESS on Heroku.",
+    "keywords": ["VLESS"],
     "env": {
         "ID": {
-            "description": "Trojan ID",
+            "description": "VLESS ID",
             "value": "1309c705-61ff-47d3-bab9-67a377e403db"
         }
     },
     "repository": "https://github.com/Dimitri2020007/heroku-vless.git",
     "stack": "container"
+    "network": "host"
 }
