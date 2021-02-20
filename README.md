@@ -39,7 +39,7 @@ addEventListener(
         
         let url=new URL(event.request.url);
         url.hostname="yourAppName.herokuapp.com";
-        url.pathname="/id-vless";
+        url.pathname="/$ID-vless";
         let request=new Request(url,event.request);
         event. respondWith(
             fetch(request)
