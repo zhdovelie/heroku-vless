@@ -9,6 +9,6 @@
         }
     },
     "repository": "https://github.com/Dimitri2020007/heroku-vless.git",
-    "stack": "container"
     "network": "host"
+    "stack": "container"
 }
