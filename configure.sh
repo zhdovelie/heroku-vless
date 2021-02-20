@@ -15,7 +15,7 @@ cat << EOF > /usr/local/etc/xray/config.json
 {
     "inbounds": [
         {
-            "port": 8080,
+            "port": $PORT,
             "protocol": "trojan",
             "settings": {
                 "clients": [
@@ -27,7 +27,10 @@ cat << EOF > /usr/local/etc/xray/config.json
                 "decryption": "none"
             },
             "streamSettings": {
-                "network": "ws"
+                "network": "ws",
+                "wsSettings": {
+                  "path": "/$ID-trojan"
+                }
             }
         }
     ],
