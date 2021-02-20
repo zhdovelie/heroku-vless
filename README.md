@@ -6,7 +6,9 @@ Deploy VLESS server to heroku
 | Connection Variables | Values |
 | -------------------- | ------ |
 | Address | yourAppName.herokuapp.com </br> Cloudflare Reverse Proxy Address |
+| AllowInsecure | false |
 | Port | 443 |
+| Path | /$ID-vless |
 | id | Use UUID Generator |
 | Flow | xtls-rprx-direct |
 | encryption | none |
