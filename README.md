@@ -3,6 +3,8 @@ Deploy VLESS server to heroku
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://dashboard.heroku.com/new?template=https://github.com/Dimitri2020007/heroku-vless/tree/main)
 
+# Vmess/VLESS Client Setup
+
 | Connection Variables | Values |
 | -------------------- | ------ |
 | `Address` | yourAppName.herokuapp.com </br> Cloudflare Reverse Proxy Address |
@@ -16,14 +18,16 @@ Deploy VLESS server to heroku
 | `Transport` | ws |
 | `Security` | tls |
 
-| ws+tls+flow supported | success | failed |
-| --------------------- | ------- | ------ |
-| `2dust/v2rayn/v2rayng` | yes | - |
-| `Openwrt ssrplus` | - | yes |
-| `Openwrt passwall` | - | yes |
-| `QV2Ray` | n/a | n/a |
+# Client Ws+Tls+Xtls-rprx-direct(Flow) Support Status
 
-Cloudflare Reverse Proxy Code
+| Client | Status |
+| ------ | ------ |
+| `2dust V2RayN` </br> `2dust V2RayNG` | Yes |
+| `OpenWrt SSRPlus` | No |
+| `OpenWrt Passwall` | No |
+| `QV2Ray` | n/a |
+
+# Cloudflare Reverse Proxy Code
 ```
 const SingleDay = 'yourAppName.herokuapp.com'
 const DoubleDay = 'yourAppName.herokuapp.com'
