@@ -23,10 +23,10 @@ Deploy VLESS server to heroku
 
 | Client | Status |
 | ------ | ------ |
-| `2dust V2RayN` </br> `2dust V2RayNG` | Yes |
-| `OpenWrt SSRPlus` | No |
-| `OpenWrt Passwall` | No |
-| `QV2Ray` | No |
+| `2dust V2RayN` </br> `2dust V2RayNG` | Ws+Tls+Flow |
+| `OpenWrt SSRPlus` | Ws+Tls |
+| `OpenWrt Passwall` | Ws+Tls |
+| `QV2Ray` | Ws+Tls |
 
 # Cloudflare Reverse Proxy Code
 
