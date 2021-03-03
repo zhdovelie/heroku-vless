@@ -5,14 +5,14 @@ mkdir /tmp/xray
 curl -L -H "Cache-Control: no-cache" -o /tmp/xray/xray.zip https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-64.zip
 unzip /tmp/xray/xray.zip -d /tmp/xray
 install -m 755 /tmp/xray/xray /usr/local/bin/xray
-xray -v
+xray -version
 
 # Download and install Trojan-go
 mkdir /tmp/trojan
 curl -L -H "Cache-Control: no-cache" -o /tmp/trojan/trojan.zip https://github.com/p4gefau1t/trojan-go/releases/download/v0.8.2/trojan-go-linux-amd64.zip
 unzip /tmp/trojan/trojan.zip -d /tmp/trojan
 install -m 755 /tmp/trojan/trojan-go /usr/local/bin/trojan-go
-trojan-go -v
+trojan-go -version
 
 # Remove temporary directory
 rm -rf /tmp/xray
@@ -24,7 +24,7 @@ cat << EOF > /usr/local/etc/xray/config.json
 {
     "inbounds": [
         {
-            "port": $PORT,
+            "port": 8080,
             "protocol": "vless",
             "settings": {
                 "clients": [
@@ -60,7 +60,7 @@ cat << EOF > /usr/local/etc/trojan-go/config.json
 {
     "inbounds": [
         {
-            "port": $PORT,
+            "port": 8081,
             "protocol": "trojan",
             "settings": {
                 "clients": [
