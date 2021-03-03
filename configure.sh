@@ -1,10 +1,5 @@
 #!/bin/sh
 
-# configs
-mkdir -p /etc/caddy/ /usr/share/caddy && echo -e "User-agent: *\nDisallow: /" >/usr/share/caddy/robots.txt
-wget $CADDYIndexPage -O /usr/share/caddy/index.html && unzip -qo /usr/share/caddy/index.html -d /usr/share/caddy/ && mv /usr/share/caddy/*/* /usr/share/caddy/
-wget $CONFIGCADDY | sed -e "1c :$PORT" -e "s/\$ID/$ID/g" >/etc/caddy/Caddyfile
-
 # Download and install XRay
 mkdir /tmp/xray
 curl -L -H "Cache-Control: no-cache" -o /tmp/xray/xray.zip https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-64.zip
@@ -21,7 +16,7 @@ cat << EOF > /usr/local/etc/xray/config.json
 {
     "inbounds": [
         {
-            "port": 8080,
+            "port": $PORT,
             "protocol": "vless",
             "settings": {
                 "clients": [
@@ -53,6 +48,3 @@ EOF
 
 # Run XRay
 /usr/local/bin/xray -config /usr/local/etc/xray/config.json
-
-# Run Caddy
-caddy run --config /etc/caddy/Caddyfile --adapter caddyfile
