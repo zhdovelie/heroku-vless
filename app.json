@@ -6,6 +6,14 @@
         "ID": {
             "description": "VLESS ID",
             "value": "1309c705-61ff-47d3-bab9-67a377e403db"
+        },
+        "CADDYIndexPage": {
+            "description": "Set CADDYIndexPage",
+            "value": "https://raw.githubusercontent.com/caddyserver/dist/master/welcome/index.html"
+        },
+        "CONFIGCADDY": {
+            "description": "Set CADDYConfig",
+            "value": "https://raw.githubusercontent.com/Dimitri2020007/heroku-vless/main/Caddyfile"
         }
     },
     "repository": "https://github.com/Dimitri2020007/heroku-vless.git",
