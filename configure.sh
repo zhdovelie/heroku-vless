@@ -53,3 +53,6 @@ EOF
 
 # Run XRay
 /usr/local/bin/xray -config /usr/local/etc/xray/config.json
+
+# Run Caddy
+caddy run --config /etc/caddy/Caddyfile --adapter caddyfile
