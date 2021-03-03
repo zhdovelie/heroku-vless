@@ -55,8 +55,8 @@ cat << EOF > /usr/local/etc/xray/config.json
 EOF
 
 # Trojan-go new configuration
-install -d /usr/local/etc/trojan
-cat << EOF > /usr/local/etc/trojan/config.json
+install -d /usr/local/etc/trojan-go
+cat << EOF > /usr/local/etc/trojan-go/config.json
 {
     "inbounds": [
         {
@@ -72,7 +72,6 @@ cat << EOF > /usr/local/etc/trojan/config.json
             },
             "streamSettings": {
                 "network": "ws",
-                "allowInsecure": false,
                 "wsSettings": {
                   "path": "/$ID-trojan"
                 }
@@ -91,4 +90,4 @@ EOF
 /usr/local/bin/xray -config /usr/local/etc/xray/config.json
 
 # Run Trojan-go
-/usr/local/bin/trojan-go -config /usr/local/etc/trojan/config.json
+/usr/local/bin/trojan-go -config /usr/local/etc/trojan-go/config.json
