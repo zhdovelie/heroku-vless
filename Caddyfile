@@ -1,0 +1,19 @@
+:$PORT {
+  header {
+      X-Robots-Tag none
+      X-Content-Type-Options nosniff
+      X-Frame-Options DENY
+      Referrer-Policy no-referrer-when-downgrade
+  }
+  
+  root * /usr/share/caddy
+  file_server browse
+  
+  @websocket_xray_vless {
+     header Connection *Upgrade*
+     header Upgrade    websocket
+     path /$ID-vless
+  }
+  reverse_proxy @websocket_xray_vless 0.0.0.0:8080
+  
+}
