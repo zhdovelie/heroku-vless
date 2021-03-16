@@ -12,7 +12,7 @@ Deploy VLESS server to heroku
 | `AllowInsecure` | false |
 | `Port` | 443 |
 | `Host` | yourAppName.herokuapp.com </br> Cloudflare Reverse Proxy Domain Name |
-| `Path` | /$ID-vless |
+| `Path` | /$ID-vless?ed=2048 |
 | `id` | Generate using UUID generator |
 | `Flow` | xtls-rprx-direct |
 | `encryption` | none |
@@ -64,4 +64,6 @@ addEventListener(
 
 # New Features
 
-Websocket 0-RTT import
+Websocket 0-RTT import (Just add at the end of path /examples?ed=2048)
+
+Client and Server Xray-core 1.4.0+ required!!
