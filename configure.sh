@@ -49,7 +49,7 @@ EOF
 # Config Caddy
 mkdir -p /etc/caddy/ /usr/share/caddy && echo -e "User-agent: *\nDisallow: /" >/usr/share/caddy/robots.txt
 wget $CADDYIndexPage -O /usr/share/caddy/index.html && unzip -qo /usr/share/caddy/index.html -d /usr/share/caddy/ && mv /usr/share/caddy/*/* /usr/share/caddy/
-wget -qO- $CONFIGCADDY >/etc/caddy/Caddyfile
+wget -qO- $CONFIGCADDY | sed -e "1c :$PORT" >/etc/caddy/Caddyfile
 
 # Run XRay
 /usr/local/bin/xray -config /usr/local/etc/xray/config.json & caddy run --config /etc/caddy/Caddyfile --adapter caddyfile
