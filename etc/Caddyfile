@@ -1,0 +1,11 @@
+:$PORT {
+  root * /usr/share/caddy
+  file_server browse
+  
+  @reverse_proxy_xray_vless {
+    transport http {
+      versions h2c
+      path /$ID-vless
+    }
+  }
+}
