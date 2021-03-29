@@ -67,3 +67,5 @@ addEventListener(
 Websocket 0-RTT import (Just add at the end of path /examples?ed=2048)
 
 Client and Server Xray-core 1.4.0+ required!!
+
+Support caddy reverse proxy
