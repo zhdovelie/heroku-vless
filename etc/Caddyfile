@@ -5,6 +5,6 @@ file_server browse
 @ws_xray_vless {
 header Connection *Upgrade*
 header Upgrade    websocket
-path /$ID-vless
+path /$ID-vless?ed=2048
 }
 reverse_proxy @ws_xray_vless unix//etc/caddy/vless
