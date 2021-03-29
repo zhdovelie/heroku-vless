@@ -2,10 +2,10 @@
   root * /usr/share/caddy
   file_server browse
   
-  @h2_xray_vless {
-    transport http {
-      versions h2c
-    }
+  @ws_xray_vless {
+  header Connection *Upgrade*
+  header Upgrade    websocket
+  path /
   }
-  reverse_proxy @h2_xray_vless unix//etc/caddy/vless
+  reverse_proxy @ws_xray_vless unix//etc/caddy/vless
 }
