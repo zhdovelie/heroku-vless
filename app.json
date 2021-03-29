@@ -4,7 +4,7 @@
     "keywords": ["VLESS"],
     "env": {
         "CONFIGCADDY": {
-            "description": "Caddy config, don't modify",
+            "description": "Caddy configuration file, please do not modify if you are not familiar with caddy configuration",
             "value": "https://raw.githubusercontent.com/Dimitri2020007/heroku-vless/main/etc/Caddyfile"
         },
         "CADDYIndexPage": {
