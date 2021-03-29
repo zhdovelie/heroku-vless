@@ -31,8 +31,8 @@ Deploy VLESS server to heroku
 # Cloudflare Reverse Proxy Code
 
 ```
-const SingleDay = 'yourAppName.herokuapp.com'
-const DoubleDay = 'yourAppName.herokuapp.com'
+const SingleDay = 'appname.herokuapp.com'
+const DoubleDay = 'appname.herokuapp.com'
 addEventListener(
     "fetch",event => {
     
@@ -44,7 +44,7 @@ addEventListener(
         }
         
         let url=new URL(event.request.url);
-        url.hostname="yourAppName.herokuapp.com";
+        url.hostname="appname.herokuapp.com";
         url.pathname="/$ID-vless";
         let request=new Request(url,event.request);
         event. respondWith(
