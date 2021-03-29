@@ -5,7 +5,6 @@
   @h2_xray_vless {
     transport http {
       versions h2c
-      path /$ID-vless
     }
   }
   reverse_proxy @h2_xray_vless unix//etc/caddy/vless
