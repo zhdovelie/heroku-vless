@@ -69,3 +69,16 @@ Websocket 0-RTT import (Just add at the end of path /examples?ed=2048)
 Client and Server Xray-core 1.4.0+ required!!
 
 Support caddy reverse proxy
+
+# 中文教程
+在heroku部署VLESS服务端
+
+新用户只需要修改id即可
+
+不熟悉caddy配置的不要修改caddy配置
+
+严禁滥用，因滥用出现的所有问题本人概不负责，且用且珍惜！
+
+本项目不宜做为长期翻墙使用。
+
+出于安全考量，请使用cdn，不要使用自定义域名，以实现VLESS+WS+TLS
