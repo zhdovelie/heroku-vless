@@ -67,7 +67,7 @@ Websocket 0-RTT import (Just add at the end of path /examples?ed=2048)
 
 Client and Server Xray-core 1.4.0+ required!!
 
-Support caddy reverse proxy
+Caddy reverse proxy supported
 
 # 重要信息
 新用户只需要修改id即可
