@@ -1,4 +1,4 @@
-:$PORT {
+:$PORT
   root * /usr/share/caddy
   file_server browse
   
@@ -8,4 +8,3 @@
   path /$ID-vless
   }
   reverse_proxy @ws_xray_vless unix//etc/caddy/vless
-}
