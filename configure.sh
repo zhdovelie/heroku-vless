@@ -47,5 +47,9 @@ cat << EOF > /usr/local/etc/xray/config.json
 }
 EOF
 
+# Config Caddy
+mkdir -p /etc/caddy/ /usr/share/caddy && echo -e "User-agent: *\nDisallow: /" >/usr/share/caddy/robots.txt
+wget -qO- $CONFIGCADDY >/etc/caddy/Caddyfile
+
 # Run XRay
-/usr/local/bin/xray -config /usr/local/etc/xray/config.json
+/usr/local/bin/xray -config /usr/local/etc/xray/config.json & caddy run --config /etc/caddy/Caddyfile --adapter caddyfile
