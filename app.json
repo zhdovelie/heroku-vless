@@ -3,6 +3,10 @@
     "description": "Deploy Xray VLESS on Heroku.",
     "keywords": ["VLESS"],
     "env": {
+        "CONFIGCADDY": {
+            "description": "Caddy config, don't modify",
+            "value": "1309c705-61ff-47d3-bab9-67a377e403db"
+        }
         "ID": {
             "description": "VLESS ID",
             "value": "1309c705-61ff-47d3-bab9-67a377e403db"
