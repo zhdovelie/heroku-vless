@@ -10,7 +10,7 @@ header {
 }
 
 basicauth /$ID/* {
-    $ID $MYUUID-HASH
+    $ID
 }
 
 @websocket_xray_vless {
