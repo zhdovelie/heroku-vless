@@ -80,4 +80,4 @@ Support caddy reverse proxy
 
 本项目不宜做为长期翻墙使用。
 
-出于安全考量，请使用cdn，不要使用自定义域名，以实现VLESS+WS+TLS
+出于安全考量，请使用cdn，不要使用自定义域名，以实现VLESS+WS+TLS。
