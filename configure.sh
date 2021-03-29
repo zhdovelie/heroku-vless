@@ -22,6 +22,7 @@ cat << EOF > /usr/local/etc/xray/config.json
                 "clients": [
                     {
                         "id": "$ID", 
+                        "flow": "xtls-rprx-direct",
                         "level": 0,
                         "email": "love@v2fly.org"
                     }
@@ -29,12 +30,10 @@ cat << EOF > /usr/local/etc/xray/config.json
                 "decryption": "none"
             },
             "streamSettings": {
-                "network": "h2",
-                "httpSettings": {
-                   "path": "/$ID-vless",
-                   "host": [
-                     "localhost"
-                   ]
+                "network": "ws",
+                "allowInsecure": false,
+                "wsSettings": {
+                  "path": "/$ID-vless?ed=2048"
                 }
             }
         }
