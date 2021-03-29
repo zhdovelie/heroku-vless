@@ -7,6 +7,10 @@
             "description": "Caddy config, don't modify",
             "value": "https://raw.githubusercontent.com/Dimitri2020007/heroku-vless/main/etc/Caddyfile"
         },
+        "CADDYIndexPage": {
+            "description": "After the custom CADDY deployment is completed, click on the display page of View，refence readme.md",
+            "value": "https://raw.githubusercontent.com/caddyserver/dist/master/welcome/index.html"
+        },
         "ID": {
             "description": "VLESS ID",
             "value": "1309c705-61ff-47d3-bab9-67a377e403db"
