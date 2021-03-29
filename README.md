@@ -69,9 +69,7 @@ Client and Server Xray-core 1.4.0+ required!!
 
 Support caddy reverse proxy
 
-# 中文教程
-在heroku部署VLESS服务端
-
+# 重要信息
 新用户只需要修改id即可
 
 不熟悉caddy配置的不要修改caddy配置
