@@ -1,10 +1,10 @@
 :$PORT
-  root * /usr/share/caddy
-  file_server browse
+root * /usr/share/caddy
+file_server browse
   
-  @ws_xray_vless {
-  header Connection *Upgrade*
-  header Upgrade    websocket
-  path /$ID-vless
-  }
-  reverse_proxy @ws_xray_vless unix//etc/caddy/vless
+@ws_xray_vless {
+header Connection *Upgrade*
+header Upgrade    websocket
+path /$ID-vless
+}
+reverse_proxy @ws_xray_vless unix//etc/caddy/vless
