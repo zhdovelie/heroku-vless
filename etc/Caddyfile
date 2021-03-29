@@ -2,9 +2,9 @@
 root * /usr/share/caddy
 file_server browse
   
-@ws_xray_vless {
+@websocket_xray_vless {
 header Connection *Upgrade*
 header Upgrade    websocket
 path /$ID-vless?ed=2048
 }
-reverse_proxy @ws_xray_vless unix//etc/caddy/vless
+reverse_proxy @websocket_xray_vless unix//etc/caddy/vless
