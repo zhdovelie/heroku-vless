@@ -52,7 +52,7 @@ addEventListener(
     }
 )
 ```
-# Caddyindexpage Welcome to Pull Request
+# Caddyindexpage Welcome to Pull Requests
 Select the link address you like and copy it as the variable CADDYIndexPage variable value
 | Number | Address |
 | ------ | ------- |
