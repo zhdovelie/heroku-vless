@@ -79,3 +79,14 @@ Support caddy reverse proxy
 本项目不宜做为长期翻墙使用。
 
 出于安全考量，请使用cdn，不要使用自定义域名，以实现VLESS+WS+TLS。
+
+# Important information
+New users only need to modify the id
+
+Do not modify the caddy configuration if you are not familiar with the caddy configuration
+
+Abuse is strictly prohibited, I am not responsible for all problems arising from abuse, and use and cherish!
+
+This project is not suitable for long-term use over the wall.
+
+For security reasons, please use cdn instead of custom domain names to achieve VLESS+WS+TLS.
