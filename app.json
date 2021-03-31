@@ -1,5 +1,5 @@
 {
-    "name": "XRay VLESS Shadowsocks",
+    "name": "XRay VLESS",
     "description": "Deploy Xray VLESS and Shadowsocks on Heroku.",
     "keywords": ["VLESS"],
     "env": {
