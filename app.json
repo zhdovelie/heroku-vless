@@ -8,7 +8,7 @@
             "value": "https://raw.githubusercontent.com/Dimitri2020007/heroku-vless/main/etc/nginx.conf"
         },
         "NGINXIndexPage": {
-            "description": "After the custom CADDY deployment is completed, click on the display page of View，reference readme.md",
+            "description": "After the custom NGINX deployment is completed, click on the display page of View，reference readme.md",
             "value": "https://raw.githubusercontent.com/caddyserver/dist/master/welcome/index.html"
         },
         "ID": {
