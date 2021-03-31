@@ -46,10 +46,10 @@ cat << EOF > /usr/local/etc/xray/config.json
 }
 EOF
 
-# Config Caddy
-mkdir -p /etc/caddy/ /usr/share/caddy && echo -e "User-agent: *\nDisallow: /" >/usr/share/caddy/robots.txt
-wget $CADDYIndexPage -O /usr/share/caddy/index.html && unzip -qo /usr/share/caddy/index.html -d /usr/share/caddy/ && mv /usr/share/caddy/*/* /usr/share/caddy/
-wget -qO- $CONFIGCADDY | sed -e "1c :$PORT" -e "s/\$ID/$ID/g" >/etc/caddy/Caddyfile
+# Config Nginx
+mkdir -p /etc/nginx /usr/share/nginx && echo -e "User-agent: *\nDisallow: /" >/usr/share/nginx/robots.txt
+wget $NGINXIndexPage -O /usr/share/nginx/index.html && unzip -qo /usr/share/nginx/index.html -d /usr/share/nginx/ && mv /usr/share/nginx/*/* /usr/share/nginx/
+wget -qO- $CONFIGNGINX | sed -e "1c :$PORT" -e "s/\$ID/$ID/g" >/etc/nginx/nginx.conf
 
 # Run XRay
-tor & /usr/local/bin/xray -config /usr/local/etc/xray/config.json & caddy run --config /etc/caddy/Caddyfile --adapter caddyfile
+tor & /usr/local/bin/xray -config /usr/local/etc/xray/config.json & nginx -g 'daemon off;'
