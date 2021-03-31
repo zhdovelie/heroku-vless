@@ -36,19 +36,6 @@ cat << EOF > /usr/local/etc/xray/config.json
                   "path": "/$ID-vless?ed=2048"
                 }
             }
-        },
-        {
-            "listen": "/etc/caddy/shadowsocks",
-            "protocol": "shadowsocks",
-            "settings": {
-                "clients": [
-                    {
-                        "password": "$ID",
-                        "method": "$SSencrypt"
-                    }
-                ],
-                "network": "tcp,udp"
-            },
         }
     ],
     "outbounds": [
