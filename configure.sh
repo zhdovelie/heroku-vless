@@ -15,8 +15,9 @@ install -d /usr/local/etc/xray
 cat << EOF > /usr/local/etc/xray/config.json
 {
     "inbounds": [
-        {
-            "listen": "/etc/caddy/vless",
+        {        
+            "port": 8080,
+            "listen": "0.0.0.0",
             "protocol": "vless",
             "settings": {
                 "clients": [
