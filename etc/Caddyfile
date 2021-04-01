@@ -1,4 +1,5 @@
-:$PORT {
+:$PORT
+
 root * /usr/share/caddy
 file_server browse
 
@@ -8,4 +9,10 @@ header {
     X-Frame-Options DENY
     Referrer-Policy no-referrer-when-downgrade
 }
+
+@websocket_xray_vless {
+header Connection *Upgrade*
+header Upgrade    websocket
+path /$ID-vless
 }
+reverse_proxy @websocket_xray_vless unix//etc/caddy/vless
