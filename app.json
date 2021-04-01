@@ -1,18 +1,18 @@
 {
-    "name": "XRay VLESS",
-    "description": "Deploy Xray VLESS on Heroku.",
+    "name": "XRay VLESS Trojan-go",
+    "description": "Deploy Xray VLESS and Trojan-go on Heroku.",
     "keywords": ["VLESS"],
     "env": {
-        "CONFIGNGINX": {
-            "description": "Nginx configuration file, please do not modify if you are not familiar with nginx configuration",
+        "CONFIGCADDY": {
+            "description": "Caddy configuration file, please do not modify if you are not familiar with caddy configuration",
             "value": "https://raw.githubusercontent.com/Dimitri2020007/heroku-vless/main/etc/nginx.conf"
         },
-        "NGINXIndexPage": {
-            "description": "After the custom NGINX deployment is completed, click on the display page of View，reference readme.md",
+        "CADDYIndexPage": {
+            "description": "After the custom CADDY deployment is completed, click on the display page of View，reference readme.md",
             "value": "https://raw.githubusercontent.com/caddyserver/dist/master/welcome/index.html"
         },
         "ID": {
-            "description": "VLESS ID",
+            "description": "VLESS & Trojan-go ID",
             "value": "1309c705-61ff-47d3-bab9-67a377e403db"
         }
     },
