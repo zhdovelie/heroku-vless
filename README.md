@@ -1,7 +1,7 @@
 # heroku-vless-trojan
 Deploy VLESS/Trojan-go server to heroku
 
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://dashboard.heroku.com/new?template=https://github.com/Dimitri2020007/heroku-vless/tree/main)
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://dashboard.heroku.com/new?template=https://github.com/Dimitri2020007/heroku-vless-trojan.git)
 
 # Vmess/VLESS Client Setup
 
