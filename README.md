@@ -1,5 +1,5 @@
-# heroku-vless-trojan
-Deploy VLESS/Trojan-go server to heroku
+# heroku-vless
+Deploy VLESS server to heroku
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://dashboard.heroku.com/new?template=https://github.com/Dimitri2020007/heroku-vless-trojan.git)
 
@@ -84,8 +84,6 @@ Websocket 0-RTT import (Just add at the end of path /examples?ed=2048) (2021.3.1
 Client and Server Xray-core 1.4.0+ required!!
 
 Caddy reverse proxy supported (2021.3.29)
-
-Support Trojan-go and vless connection (2021.4.1)
 
 # 重要信息
 新用户只需要修改id和Caddy主页配置即可
