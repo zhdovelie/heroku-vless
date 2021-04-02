@@ -48,7 +48,7 @@ EOF
 
 # Download and install Trojan-go
 mkdir /tmp/trojango
-curl -L -H "Cache-Control: no-cache" -o /tmp/trojango/trojan-go.zip https://github.com/p4gefau1t/trojan-go/releases/download/v0.8.2/trojan-go-linux-amd64.zip
+curl -L -H "Cache-Control: no-cache" -o /tmp/trojango/trojan-go.zip https://github.com/p4gefau1t/trojan-go/releases/download/v0.8.3/trojan-go-linux-amd64.zip
 unzip /tmp/trojango/trojan-go.zip -d /tmp/trojango
 install -m 755 /tmp/trojango/trojan-go /usr/local/bin/trojan-go
 trojan-go -version
