@@ -79,7 +79,7 @@ Select the link address you like and copy it as the variable CADDYIndexPage vari
 
 # New Features
 
-Websocket 0-RTT import (Just add at the end of path /examples?ed=2048)
+Websocket 0-RTT import (Just add at the end of path /examples?ed=2048) (2021.3.16)
 
 Client and Server Xray-core 1.4.0+ required!!
 
