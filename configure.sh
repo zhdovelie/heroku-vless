@@ -69,11 +69,10 @@ cat << EOF > /usr/local/etc/trojan-go/config.json
                     {
                         "password": "$ID"
                     }
-                ],
+                ]
             },
             "streamSettings": {
                 "network": "ws",
-                "allowInsecure": false,
                 "wsSettings": {
                   "path": "/$ID-trojan"
                 }
