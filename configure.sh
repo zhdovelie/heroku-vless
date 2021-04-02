@@ -42,7 +42,7 @@ cat << EOF > /usr/local/etc/xray/config.json
         {
             "protocol": "freedom"
         }
-    ]
+    ],
 }
 EOF
 
@@ -83,7 +83,7 @@ cat << EOF > /usr/local/etc/trojan-go/config.json
         {
             "protocol": "freedom"
         }
-    ]
+    ],
 }
 EOF
 
