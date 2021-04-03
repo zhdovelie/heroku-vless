@@ -4,7 +4,7 @@
     "keywords": ["VLESS"],
     "env": {
         "ID": {
-            "description": "VLESS & Trojan-go ID",
+            "description": "VLESS ID",
             "value": "1309c705-61ff-47d3-bab9-67a377e403db"
         }
     },
