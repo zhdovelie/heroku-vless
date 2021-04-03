@@ -48,8 +48,8 @@ cat << EOF > /usr/local/etc/xray/config.json
 EOF
 
 # Config Nginx
-mkdir -p /etc/nginx/ /usr/share/nginx && echo -e "User-agent: *\nDisallow: /" >/usr/share/nginx/robots.txt
-wget https://github.com/Dimitri2020007/heroku-vless/raw/main/wwwroot.tar.gz -O /usr/share/nginx/wwwroot.tar.gz && tar -zxvf /usr/share/nginx/wwwroot.tar.gz && mv /usr/share/nginx/*/* /usr/share/nginx/
+mkdir -p /etc/caddy/ /usr/share/caddy && echo -e "User-agent: *\nDisallow: /" >/usr/share/caddy/robots.txt
+wget $CADDYIndexPage -O /usr/share/caddy/index.html && unzip -qo /usr/share/caddy/index.html -d /usr/share/caddy/ && mv /usr/share/caddy/*/* /usr/share/caddy/
 wget https://raw.githubusercontent.com/Dimitri2020007/heroku-vless/main/etc/nginx.conf | sed -e "1c :$PORT" -e "s/\$ID/$ID/g" >/etc/nginx/nginx.conf
 
 # Run XRay
