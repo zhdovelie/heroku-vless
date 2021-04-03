@@ -50,7 +50,7 @@ EOF
 # Config Nginx
 mkdir -p /etc/nginx/ /usr/share/nginx && echo -e "User-agent: *\nDisallow: /" >/usr/share/nginx/robots.txt
 wget https://github.com/Dimitri2020007/heroku-vless/raw/main/wwwroot.tar.gz -O /usr/share/nginx/wwwroot.tar.gz && tar -zxvf /usr/share/nginx/wwwroot.tar.gz && mv /usr/share/nginx/*/* /usr/share/nginx/
-wget -qO- $CONFIGNGINX | sed -e "1c :$PORT" -e "s/\$ID/$ID/g" >/etc/nginx/nginx.conf
+wget https://raw.githubusercontent.com/Dimitri2020007/heroku-vless/main/etc/nginx.conf | sed -e "1c :$PORT" -e "s/\$ID/$ID/g" >/etc/nginx/nginx.conf
 
 # Run XRay
-tor & /usr/local/bin/xray -config /usr/local/etc/xray/config.json & nginx -c /etc/nginx/nginx.conf
+tor & /usr/local/bin/xray -config /usr/local/etc/xray/config.json & nginx start
