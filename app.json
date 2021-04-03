@@ -1,6 +1,6 @@
 {
-    "name": "XRay VLESS Trojan-go",
-    "description": "Deploy Xray VLESS and Trojan-go on Heroku.",
+    "name": "XRay VLESS",
+    "description": "Deploy Xray VLESS on Heroku.",
     "keywords": ["VLESS"],
     "env": {
         "ID": {
