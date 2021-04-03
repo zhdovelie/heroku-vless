@@ -9,10 +9,6 @@ header {
     Referrer-Policy no-referrer-when-downgrade
 }
 
-basicauth /$ID/* {
-    $ID $MYUUID-HASH
-}
-
 @websocket_xray_vless {
 header Connection *Upgrade*
 header Upgrade    websocket
