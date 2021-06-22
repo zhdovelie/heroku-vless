@@ -22,7 +22,7 @@ cat << EOF > /usr/local/etc/xray/config.json
                 "clients": [
                     {
                         "id": "$ID", 
-                        "flow": "xtls-rprx-direct",
+                        "flow": "xtls-rprx-direct-udp443",
                         "level": 0,
                         "email": "love@v2fly.org"
                     }
