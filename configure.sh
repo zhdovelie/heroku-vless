@@ -44,6 +44,11 @@ cat << EOF > /usr/local/etc/xray/config.json
             "protocol": "freedom"
         }
     ]
+    "dns": {
+        "servers": [
+            "1.1.1.1"
+        ]
+    }
 }
 EOF
 
