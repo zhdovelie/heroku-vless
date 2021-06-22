@@ -33,7 +33,6 @@ cat << EOF > /usr/local/etc/xray/config.json
                 "network": "ws",
                 "allowInsecure": false,
                 "wsSettings": {
-                  "acceptProxyProtocol": false,
                   "path": "/$ID-vless?ed=2048"
                 }
             }
