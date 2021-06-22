@@ -54,8 +54,9 @@ EOF
 
 # Config Caddy
 sed -e "/^#/d"\
-    -e "s/\:$PORT/:$PORT/g"\
-    -e "s/\$ID/$ID/g"
+    -e "1c :$PORT"
+    -e "s/\$ID/$ID/g" 
+    -e "s/\$MYUUID-HASH/$(caddy hash-password --plaintext $ID)/g"
     -e "$s"\
     /etc/nginx.conf > /etc/nginx/nginx.conf
 echo /etc/nginx/nginx.conf
