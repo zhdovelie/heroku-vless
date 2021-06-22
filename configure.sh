@@ -16,8 +16,7 @@ cat << EOF > /usr/local/etc/xray/config.json
 {
     "inbounds": [
         {        
-            "listen": "0.0.0.0",
-            "port": 8080,
+            "listen": "/etc/caddy/vless",
             "protocol": "vless",
             "settings": {
                 "clients": [
@@ -53,11 +52,7 @@ cat << EOF > /usr/local/etc/xray/config.json
 }
 EOF
 
-# Config Nginx
-cd /wwwroot
-tar xvf wwwroot.tar.gz
-rm -rf wwwroot.tar.gz
-
+# Config Caddy
 sed -e "/^#/d"\
     -e "s/\:$PORT/:$PORT/g"\
     -e "s/\$ID/$ID/g"
