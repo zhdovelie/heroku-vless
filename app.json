@@ -3,16 +3,16 @@
     "description": "Deploy Xray VLESS on Heroku.",
     "keywords": ["VLESS"],
     "env": {
-        "CONFIGCADDY": {
-            "description": "Caddy configuration file, please do not modify if you are not familiar with caddy configuration",
-            "value": "https://raw.githubusercontent.com/Dimitri2020007/heroku-vless/main/etc/Caddyfile"
+        "CONFIGNGINX": {
+            "description": "Nginx configuration file, please do not modify if you are not familiar with nginx configuration",
+            "value": "https://github.com/Dimitri2020007/heroku-vless/blob/main/etc/nginx/nginx.conf"
         },
-        "CADDYIndexPage": {
-            "description": "After the custom CADDY deployment is completed, click on the display page of View，reference readme.md",
+        "NginxIndexPage": {
+            "description": "Custom nginx indexpage",
             "value": "https://raw.githubusercontent.com/caddyserver/dist/master/welcome/index.html"
         },
         "ID": {
-            "description": "VLESS ID",
+            "description": "VLESS ID, use [uuidgenator](https://www.uuidgenerator.net/)",
             "value": "1309c705-61ff-47d3-bab9-67a377e403db"
         }
     },
