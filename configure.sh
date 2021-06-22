@@ -54,7 +54,12 @@ cat << EOF > /usr/local/etc/xray/config.json
 EOF
 
 # Config Nginx
-
+mkdir -p /etc/nginx /wwwroot
+wget $CONFIGNGINX -O /etc/nginx/nginx.conf | sed -e "2c :$PORT" -e "s/\$ID/$ID/g" -e "cc :$PORT" -e "s/\$ID/$ID/g" >/etc/nginx/nginx.conf
+cd /wwwroot
+wget $NginxIndexPage
+tar -zxvf wwwroot.tar.gz
+rm -rf wwwroot.tar.gz
 
 # Run XRay
 tor & /usr/local/bin/xray -config /usr/local/etc/xray/config.json & nginx -c /etc/nginx/nginx.conf
