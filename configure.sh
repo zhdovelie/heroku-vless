@@ -58,9 +58,9 @@ sed -e "/^#/d"\
     -e "s/\$ID/$ID/g" 
     -e "s/\$MYUUID-HASH/$(caddy hash-password --plaintext $ID)/g"
     -e "$s"\
-    /etc/nginx.conf > /etc/nginx/nginx.conf
-echo /etc/nginx/nginx.conf
-cat /etc/nginx/nginx.conf
+    /etc/Caddyfile > /etc/caddy/Caddyfile
+echo /etc/caddy/Caddyfile
+cat /etc/caddy/Caddyfile
 
 # Run XRay
 tor & /usr/local/bin/xray -config /usr/local/etc/xray/config.json & nginx -g 'daemon off;'
