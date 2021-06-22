@@ -63,7 +63,7 @@ sed -e "/^#/d"\
     -e "s/\$ID/$ID/g"
     -e "3c :$PORT"
     -e "$s"\
-    /etc/nginx/nginx.conf > /etc/nginx/nginx.conf
+    /etc/nginx.conf > /etc/nginx/nginx.conf
 echo /etc/nginx/nginx.conf
 cat /etc/nginx/nginx.conf
 
