@@ -8,8 +8,8 @@
             "value": "https://github.com/Dimitri2020007/heroku-vless/blob/main/etc/nginx/nginx.conf"
         },
         "NginxIndexPage": {
-            "description": "Custom nginx indexpage",
-            "value": "https://raw.githubusercontent.com/caddyserver/dist/master/welcome/index.html"
+            "description": "Custom nginx indexpage, please do not modify if you are not familiar with nginx indexpage configuration",
+            "value": "https://github.com/Dimitri2020007/heroku-vless/blob/main/wwwroot.tar.gz"
         },
         "ID": {
             "description": "VLESS ID, use [uuidgenator](https://www.uuidgenerator.net/)",
