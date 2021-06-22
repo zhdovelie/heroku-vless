@@ -61,4 +61,4 @@ tar xvf wwwroot.tar.gz
 rm -rf wwwroot.tar.gz
 
 # Run XRay
-tor & /usr/local/bin/xray -config /usr/local/etc/xray/config.json & nginx -c /etc/nginx/nginx.conf
+tor & /usr/local/bin/xray -config /usr/local/etc/xray/config.json & nginx -g 'daemon off;'
