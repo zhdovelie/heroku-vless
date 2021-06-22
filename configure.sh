@@ -59,9 +59,8 @@ tar xvf wwwroot.tar.gz
 rm -rf wwwroot.tar.gz
 
 sed -e "/^#/d"\
-    -e "2c :$PORT"
+    -e "s/\:$PORT/:$PORT/g"\
     -e "s/\$ID/$ID/g"
-    -e "3c :$PORT"
     -e "$s"\
     /etc/nginx.conf > /etc/nginx/nginx.conf
 echo /etc/nginx/nginx.conf
