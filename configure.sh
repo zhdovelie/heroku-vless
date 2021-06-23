@@ -16,7 +16,7 @@ cat << EOF > /usr/local/etc/xray/config.json
 {
     "inbounds": [
         {        
-            "listen": "/etc/caddy/vless",
+            "listen": "/etc/nginx/vless",
             "protocol": "vless",
             "settings": {
                 "clients": [
