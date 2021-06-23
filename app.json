@@ -9,7 +9,7 @@
         },
         "CADDYIndexPage": {
             "description": "After the custom CADDY deployment is completed, click on the display page of View，reference readme.md",
-            "value": "https://raw.githubusercontent.com/caddyserver/dist/master/welcome/index.html"
+            "value": "https://github.com/wulabing/3DCEList/archive/master.zip"
         },
         "ID": {
             "description": "VLESS ID, use [uuidgenator](https://www.uuidgenerator.net/)",
