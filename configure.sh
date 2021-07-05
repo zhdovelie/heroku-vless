@@ -30,10 +30,10 @@ cat << EOF > /usr/local/etc/xray/config.json
                 "decryption": "none"
             },
             "streamSettings": {
-                "network": "ws",
+                "network": "grpc",
                 "allowInsecure": false,
-                "wsSettings": {
-                  "path": "/$ID-vless?ed=2048"
+                "grpcSettings": {
+                  "serviceName": "$ID"
                 }
             }
         }
