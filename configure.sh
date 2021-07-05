@@ -16,7 +16,7 @@ cat << EOF > /usr/local/etc/xray/config.json
 {
     "inbounds": [
         {   
-            "port": 2002,
+            "listen": "/etc/caddy/grpc",
             "protocol": "vless",
             "settings": {
                 "clients": [
