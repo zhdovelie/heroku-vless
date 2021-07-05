@@ -20,8 +20,8 @@ path /$ID-vless
 }
 reverse_proxy @websocket_xray_vless unix//etc/caddy/vless
 
-@grpc_xray_grpc {
+@grpc {
 protocol grpc
 path  /grpc/*
 }
-reverse_proxy @grpc_xray_grpc h2c://$ADD:2002
+reverse_proxy @grpc h2c://$ADD:2002
