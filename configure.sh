@@ -16,14 +16,12 @@ cat << EOF > /usr/local/etc/xray/config.json
 {
     "inbounds": [
         {        
-            "listen": "/etc/caddy/vless",
+            "listen": "/etc/caddy/grpc",
             "protocol": "vless",
             "settings": {
                 "clients": [
                     {
                         "id": "$ID", 
-                        "flow": "xtls-rprx-direct",
-                        "level": 0,
                         "email": "love@v2fly.org"
                     }
                 ],
