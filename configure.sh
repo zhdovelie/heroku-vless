@@ -31,7 +31,8 @@ cat << EOF > /usr/local/etc/xray/config.json
                 "network": "grpc",
                 "allowInsecure": false,
                 "grpcSettings": {
-                  "serviceName": "/$ID-grpc"
+                  "serviceName": "/$ID-grpc",
+                  "multiMode": true
                 }
             }
         }
