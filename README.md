@@ -16,7 +16,7 @@ Deploy VLESS server to heroku
 | `id` | Generate using UUID generator or V2RayN/V2RayNG client generate </br> [uuidgenerator](https://www.uuidgenerator.net/) |
 | `Flow` | xtls-rprx-direct |
 | `encryption` | none |
-| `Transport` | ws </br> grpc (latest xray-core client required!!) |
+| `Transport` | ws |
 | `Tls` | Tls must open, otherwise your network was insecure! |
 
 # Client Ws+Tls+Xtls-rprx-direct(Flow) Support Status
@@ -86,8 +86,6 @@ Client and Server Xray-core 1.4.0+ required!!
 Caddy reverse proxy supported (2021.3.29)
 
 Add dns config block in configure.sh (2021.6.9)
-
-grpc transport supported (2021.7.5)
 
 # 重要信息
 新用户只需要修改id和Caddy主页配置即可
