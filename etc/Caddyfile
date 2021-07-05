@@ -22,6 +22,6 @@ reverse_proxy @websocket_xray_vless unix//etc/caddy/vless
 
 @grpc {
 protocol grpc
-path 
+path /$ID-grpc
 }
 reverse_proxy @grpc unix//etc/caddy/grpc
