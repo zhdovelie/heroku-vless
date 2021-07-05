@@ -15,8 +15,9 @@ install -d /usr/local/etc/xray
 cat << EOF > /usr/local/etc/xray/config.json
 {
     "inbounds": [
-        {        
-            "listen": "/etc/caddy/grpc",
+        {   
+            "port": 8180,
+            "listen": "0.0.0.0",
             "protocol": "vless",
             "settings": {
                 "clients": [
