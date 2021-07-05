@@ -87,6 +87,8 @@ Caddy reverse proxy supported (2021.3.29)
 
 Add dns config block in configure.sh (2021.6.9)
 
+grpc transport supported (2021.7.5)
+
 # 重要信息
 新用户只需要修改id和Caddy主页配置即可
 
