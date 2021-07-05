@@ -11,10 +11,6 @@
             "description": "After the custom CADDY deployment is completed, click on the display page of View，reference readme.md",
             "value": "https://raw.githubusercontent.com/caddyserver/dist/master/welcome/index.html"
         },
-        "ADD": {
-            "description": "Custom CADDY address, use cloudflare workers",
-            "value": "workers.dev"
-        },
         "ID": {
             "description": "VLESS ID, use uuid generator",
             "value": "1309c705-61ff-47d3-bab9-67a377e403db"
