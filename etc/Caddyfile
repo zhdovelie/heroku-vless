@@ -19,3 +19,9 @@ header Upgrade    websocket
 path /$ID-vless
 }
 reverse_proxy @websocket_xray_vless unix//etc/caddy/vless
+
+@grpc_xray_grpc {
+protocol grpc
+path  /grpc/*
+}
+reverse_proxy @grpc_xray_grpc h2c://127.0.0.1:2002
