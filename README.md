@@ -16,7 +16,7 @@ Deploy VLESS server to heroku
 | `id` | Generate using UUID generator or V2RayN/V2RayNG client generate </br> [uuidgenerator](https://www.uuidgenerator.net/) |
 | `Flow` | xtls-rprx-direct |
 | `encryption` | none |
-| `Transport` | ws |
+| `Transport` | ws </br> grpc (latest xray-core client required!!) |
 | `Tls` | Tls must open, otherwise your network was insecure! |
 
 # Client Ws+Tls+Xtls-rprx-direct(Flow) Support Status
