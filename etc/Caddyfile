@@ -24,4 +24,4 @@ reverse_proxy @websocket_xray_vless unix//etc/caddy/vless
 protocol grpc
 path  /grpc/*
 }
-reverse_proxy @grpc_xray_grpc unix//etc/caddy/grpc
+reverse_proxy @grpc_xray_grpc h2c://$ADD:2002
