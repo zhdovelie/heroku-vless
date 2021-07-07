@@ -23,5 +23,6 @@ reverse_proxy @websocket_xray_vless unix//etc/caddy/vless
 @grpc {
     protocol grpc
     path /grpc/*
+    allow_h2c
 }
 reverse_proxy @grpc h2c://127.0.0.1:2002
