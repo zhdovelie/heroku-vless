@@ -1,10 +1,7 @@
 :$PORT
 root * /usr/share/caddy
 file_server browse
-
-protocol {
-    allow_h2c
-}
+allow_h2c
 
 header {
     X-Robots-Tag none
