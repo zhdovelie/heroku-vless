@@ -16,7 +16,8 @@ cat << EOF > /usr/local/etc/xray/config.json
 {
     "inbounds": [
         {   
-            "listen": "/etc/caddy/vless",
+            "port": 2002,
+            "listen": "127.0.0.1",
             "protocol": "vless",
             "settings": {
                 "clients": [
@@ -30,10 +31,10 @@ cat << EOF > /usr/local/etc/xray/config.json
                 "decryption": "none"
             },
             "streamSettings": {
-                "network": "ws",
+                "network": "grpc",
                 "allowInsecure": false,
-                "wsSettings": {
-                  "path": "/$ID-vless?ed=2048"
+                "grpcSettings": {
+                  "serviceName": "grpc"
                 }
             }
         }
