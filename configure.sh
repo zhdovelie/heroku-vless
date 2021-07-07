@@ -36,6 +36,17 @@ cat << EOF > /usr/local/etc/xray/config.json
                   "path": "/$ID-vless?ed=2048"
                 }
             }
+        },
+        {
+            "port": 10800,
+            "protocol": "shadowsocks",
+            "settings": {
+                "clients": [
+                    "password": "$PASS",
+                    "method": "chacha20-poly1305"
+                ],
+                "network": "tcp,udp"
+            }
         }
     ],
     "outbounds": [
