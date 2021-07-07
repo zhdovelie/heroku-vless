@@ -2,6 +2,10 @@ $APPNAME.herokuapp.com:$PORT
 root * /usr/share/caddy
 file_server browse
 
+protocol {
+    allow_h2c
+}
+
 header {
     X-Robots-Tag none
     X-Content-Type-Options nosniff
