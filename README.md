@@ -35,7 +35,7 @@ example 1
 addEventListener(
   "fetch", event => {
     let url = new URL(event.request.url);
-    url.host = "p3terx.com";
+    url.host = "";
     let request = new Request(url, event.request);
     event.respondWith(
       fetch(request)
