@@ -19,13 +19,13 @@ cat << EOF > /usr/local/etc/xray/config.json
     },
     "inbounds": [
         {   
-            "port": 8180
-            "listen": "0.0.0.0",
+            "listen": "/etc/caddy/vless",
             "protocol": "vless",
             "settings": {
                 "clients": [
                     {
                         "id": "$ID", 
+                        "flow": "xtls-rprx-direct",
                         "level": 0,
                         "email": "love@v2fly.org"
                     }
@@ -33,11 +33,10 @@ cat << EOF > /usr/local/etc/xray/config.json
                 "decryption": "none"
             },
             "streamSettings": {
-                "network": "grpc",
+                "network": "ws",
                 "allowInsecure": false,
-                "grpcSettings": {
-                  "serviceName": "grpc",
-                  "multiMode": true
+                "wsSettings": {
+                  "path": "/$ID-vless?ed=2048"
                 }
             }
         }
