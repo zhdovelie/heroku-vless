@@ -28,8 +28,23 @@ Deploy VLESS server to heroku
 | `OpenWrt Passwall` | Ws+Tls |
 | `QV2Ray` | Ws+Tls |
 
-# Cloudflare Reverse Proxy Code
+# Cloudflare Reverse Proxy Code (Choose one from both examples)
 
+example 1
+```
+addEventListener(
+  "fetch", event => {
+    let url = new URL(event.request.url);
+    url.host = "p3terx.com";
+    let request = new Request(url, event.request);
+    event.respondWith(
+      fetch(request)
+    )
+  }
+)
+```
+
+example 2
 ```
 const SingleDay = 'appname.herokuapp.com'
 const DoubleDay = 'appname.herokuapp.com'
@@ -52,6 +67,7 @@ addEventListener(
     }
 )
 ```
+
 # Caddyindexpage (Welcome to Pull Requests)
 Select the link address you like and copy it as the variable CADDYIndexPage variable value
 | Number | Address |
