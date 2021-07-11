@@ -14,6 +14,9 @@ rm -rf /tmp/xray
 install -d /usr/local/etc/xray
 cat << EOF > /usr/local/etc/xray/config.json
 {
+    "log": {
+        "loglevel": "none"
+    },
     "inbounds": [
         {   
             "listen": "/etc/caddy/vless",
