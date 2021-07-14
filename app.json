@@ -14,10 +14,6 @@
         "ID": {
             "description": "VLESS ID, use uuid generator (https://www.uuidgenerator.net/)",
             "value": "1309c705-61ff-47d3-bab9-67a377e403db"
-        },
-        "APPNAME": {
-            "description": "Appname same with app name",
-            "value": "appname"
         }
     },
     "repository": "https://github.com/Dimitri2020007/heroku-vless.git",
