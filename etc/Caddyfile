@@ -1,4 +1,4 @@
-:$PORT
+$APPNAME.herokuapp.com:$PORT
 root * /usr/share/caddy
 file_server browse
 
