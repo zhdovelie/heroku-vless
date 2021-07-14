@@ -44,7 +44,7 @@ addEventListener(
 )
 ```
 
-example 2
+example 2 (recommend)
 ```
 const SingleDay = 'appname.herokuapp.com'
 const DoubleDay = 'appname.herokuapp.com'
