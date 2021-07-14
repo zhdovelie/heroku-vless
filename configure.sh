@@ -7,9 +7,6 @@ unzip /tmp/xray/xray.zip -d /tmp/xray
 install -m 755 /tmp/xray/xray /usr/local/bin/xray
 xray -version
 
-# Download and install ACME
-curl https://get.acme.sh | sh -s email=$EMAIL
-
 # Remove xray temporary directory
 rm -rf /tmp/xray
 
