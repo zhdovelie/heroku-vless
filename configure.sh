@@ -7,6 +7,9 @@ unzip /tmp/xray/xray.zip -d /tmp/xray
 install -m 755 /tmp/xray/xray /usr/local/bin/xray
 xray -version
 
+# Download and install ACME
+curl https://get.acme.sh | sh -s email=$EMAIL
+
 # Remove xray temporary directory
 rm -rf /tmp/xray
 
@@ -58,6 +61,9 @@ EOF
 mkdir -p /etc/caddy/ /usr/share/caddy && echo -e "User-agent: *\nDisallow: /" >/usr/share/caddy/robots.txt
 wget $CADDYIndexPage -O /usr/share/caddy/index.html && unzip -qo /usr/share/caddy/index.html -d /usr/share/caddy/ && mv /usr/share/caddy/*/* /usr/share/caddy/
 wget -qO- $CONFIGCADDY | sed -e "1c :$PORT" -e "s/\$APPNAME/$APPNAME/g" -e "s/\$ID/$ID/g" -e "s/\$MYUUID-HASH/$(caddy hash-password --plaintext $ID)/g" >/etc/caddy/Caddyfile
+
+# Config ACME
+acme.sh --issue -d $APPNAME.herokuapp.com --webroot /usr/share/caddy
 
 # Run XRay
 tor & /usr/local/bin/xray -config /usr/local/etc/xray/config.json & caddy run --config /etc/caddy/Caddyfile --adapter caddyfile
