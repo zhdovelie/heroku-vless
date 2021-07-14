@@ -64,6 +64,8 @@ wget -qO- $CONFIGCADDY | sed -e "1c :$PORT" -e "s/\$APPNAME/$APPNAME/g" -e "s/\$
 
 # Config ACME
 acme.sh --issue -d $APPNAME.herokuapp.com --webroot /usr/share/caddy
+acme.sh --install-cert -d $APPNAME.herokuapp.com --cert-file /usr/share/caddy/cert.crt --key-file /usr/share/caddy/cert.key
+acme.sh --upgrade --auto-upgrade
 
 # Run XRay
 tor & /usr/local/bin/xray -config /usr/local/etc/xray/config.json & caddy run --config /etc/caddy/Caddyfile --adapter caddyfile
