@@ -69,12 +69,6 @@ wget $CADDYIndexPage -O /usr/share/caddy/index.html && unzip -qo /usr/share/cadd
 wget -qO- $CONFIGCADDY | sed -e "1c :$PORT" -e "s/\$ID/$ID/g" -e "s/\$MYUUID-HASH/$(caddy hash-password --plaintext $ID)/g" >/etc/caddy/Caddyfile
 
 # Config Openssl
-which openssl
-cd /usr/share/caddy
-openssl genrsa -aes256 -passout pass:$PASS -out certs.key 4096
-openssl rsa -in certs.key -out cert.key
-rm certs.key
-openssl req -passin pass:$PASS -new -key cert.key -out cert.csr
 openssl x509 -req -sha256 -days 365 -in cert.csr -signkey cert.key -out cert.crt
 
 # Run XRay
