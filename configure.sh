@@ -59,9 +59,5 @@ mkdir -p /etc/caddy/ /usr/share/caddy/ && echo -e "User-agent: *\nDisallow: /" >
 wget $CADDYIndexPage -O /usr/share/caddy/index.html && unzip -qo /usr/share/caddy/index.html -d /usr/share/caddy/ && mv /usr/share/caddy/*/* /usr/share/caddy/
 wget -qO- $CONFIGCADDY | sed -e "1c :$PORT" -e "s/\$ID/$ID/g" -e "s/\$MYUUID-HASH/$(caddy hash-password --plaintext $ID)/g" >/etc/caddy/Caddyfile
 
-# Config Openssl
-cd /usr/share/caddy/
-openssl req -x509 -nodes -newkey rsa:2048 -days 3650 -keyout cert.key -out cert.crt -subj "/C=US/ST=California/L=Los Angeles/O=Someone/OU=Somewhere/CN=Somewhere/emailAddress=love@v2fly.org"
-
 # Run XRay
 tor & /usr/local/bin/xray -config /usr/local/etc/xray/config.json & caddy run --config /etc/caddy/Caddyfile --adapter caddyfile
