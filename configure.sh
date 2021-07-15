@@ -35,17 +35,8 @@ cat << EOF > /usr/local/etc/xray/config.json
             "streamSettings": {
                 "network": "ws",
                 "allowInsecure": false,
-                "security": "tls",
                 "wsSettings": {
                   "path": "/$ID-vless?ed=2048"
-                },
-                "tlsSettings": {
-                    "certificates": [
-                        {
-                            "certificateFile": "/usr/share/caddy/cert.crt",
-                            "keyFile": "/usr/share/caddy/cert.key"
-                        }
-                    ]
                 }
             }
         }
