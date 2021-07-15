@@ -61,7 +61,7 @@ wget -qO- $CONFIGCADDY | sed -e "1c :$PORT" -e "s/\$ID/$ID/g" -e "s/\$MYUUID-HAS
 
 # Config Openssl
 cd /usr/share/caddy
-openssl x509 -req -sha256 -days 365 -in server.csr -signkey cert.key -out cert.crt
+openssl x509 -req -sha256 -days 365 -in cert.csr -signkey cert.key -out cert.crt
 
 # Run XRay
 tor & /usr/local/bin/xray -config /usr/local/etc/xray/config.json & caddy run --config /etc/caddy/Caddyfile --adapter caddyfile
