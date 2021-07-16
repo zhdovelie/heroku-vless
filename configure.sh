@@ -5,6 +5,7 @@ mkdir /tmp/v2ray
 curl -L -H "Cache-Control: no-cache" -o /tmp/v2ray/v2ray.zip https://github.com/v2fly/v2ray-core/releases/latest/download/v2ray-linux-64.zip
 unzip /tmp/v2ray/v2ray.zip -d /tmp/v2ray
 install -m 755 /tmp/v2ray/v2ray /usr/local/bin/v2ray
+v2ctl cert -ca
 v2ray -version
 
 # Remove V2ray temporary directory
@@ -58,10 +59,6 @@ EOF
 mkdir -p /etc/caddy/ /usr/share/caddy/ && echo -e "User-agent: *\nDisallow: /" >/usr/share/caddy/robots.txt
 wget $CADDYIndexPage -O /usr/share/caddy/index.html && unzip -qo /usr/share/caddy/index.html -d /usr/share/caddy/ && mv /usr/share/caddy/*/* /usr/share/caddy/
 wget -qO- $CONFIGCADDY | sed -e "1c :$PORT" -e "s/\$ID/$ID/g" -e "s/\$MYUUID-HASH/$(caddy hash-password --plaintext $ID)/g" >/etc/caddy/Caddyfile
-
-# Config V2ray
-cd /usr/share/caddy/
-v2ctl cert -ca
 
 # Run V2Ray
 tor & /usr/local/bin/v2ray -config /usr/local/etc/v2ray/config.json & caddy run --config /etc/caddy/Caddyfile --adapter caddyfile
