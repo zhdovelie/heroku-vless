@@ -48,7 +48,8 @@ cat << EOF > /usr/local/etc/xray/config.json
     ],
     "dns": {
         "servers": [
-            "1.1.1.1"
+            "https://cloudflare-dns.com/dns-query",
+            "https://dns.google/dns-query"
         ]
     }
 }
