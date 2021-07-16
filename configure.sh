@@ -34,9 +34,18 @@ cat << EOF > /usr/local/etc/v2ray/config.json
             },
             "streamSettings": {
                 "network": "ws",
+                "security": "tls",
                 "allowInsecure": false,
                 "wsSettings": {
                   "path": "/$ID-vless"
+                },
+                "tlsSettings": {
+                    "certificates": [
+                        {
+                            "certificateFile": "/usr/share/caddy/cert_cert.pem",
+                            "keyFile": "/usr/share/caddy/cert_key.pem"
+                        }
+                    ]
                 }
             }
         }
