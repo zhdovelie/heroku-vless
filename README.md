@@ -8,25 +8,16 @@ Deploy VLESS server to heroku
 | Connection Variables | Values |
 | -------------------- | ------ |
 | `Address` | yourAppName.herokuapp.com </br> Cloudflare Reverse Proxy IP |
-| `SNI` | null |
+| `SNI` | none |
 | `AllowInsecure` | false |
 | `Port` | 443 |
 | `Host` | yourAppName.herokuapp.com </br> Cloudflare Reverse Proxy Domain Name |
 | `Path` | /$ID-vless?ed=2048 |
 | `id` | Generate using UUID generator or V2RayN/V2RayNG client generate </br> [uuidgenerator](https://www.uuidgenerator.net/) |
-| `Flow` | xtls-rprx-direct |
+| `Flow` | none |
 | `encryption` | none |
 | `Transport` | ws |
 | `Tls` | Tls must open, otherwise your network was insecure! |
-
-# Client Ws+Tls+Xtls-rprx-direct(Flow) Support Status
-
-| Client | Status |
-| ------ | ------ |
-| `2dust V2RayN` </br> `2dust V2RayNG` | Ws+Tls+Flow |
-| `OpenWrt SSRPlus` | Ws+Tls |
-| `OpenWrt Passwall` | Ws+Tls |
-| `QV2Ray` | Ws+Tls |
 
 # Cloudflare Reverse Proxy Code (Choose one from both examples)
 
