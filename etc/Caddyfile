@@ -21,7 +21,7 @@ basicauth /$ID/* {
     $ID $MYUUID-HASH
 }
 
-@websocket /$ID/* {
+@websocket {
     header Connection *Upgrade*
     header Upgrade    websocket
     path /$ID-vless
