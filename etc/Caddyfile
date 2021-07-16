@@ -22,7 +22,7 @@ $APPNAME.herokuapp.com:$PORT {
     
     @grpc {
         protocol grpc
-        path /grpc/*
+        path /grpc/Tun
     }
     reverse_proxy @grpc h2c://127.0.0.1:8180
 }
