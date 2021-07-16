@@ -19,10 +19,4 @@ $APPNAME.herokuapp.com:$PORT {
         path /$ID-vless
     }
     reverse_proxy @websocket unix//etc/caddy/vless
-    
-    @grpc {
-        protocol grpc
-        path /grpc/Tun
-    }
-    reverse_proxy @grpc h2c://127.0.0.1:8180
 }
