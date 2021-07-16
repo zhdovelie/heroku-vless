@@ -41,8 +41,8 @@ cat << EOF > /usr/local/etc/v2ray/config.json
                 "tlsSettings": {
                   "serverName": "$APPNAME.herokuapp.com",
                   "certificates": [
-                      "certificateFile": "/path/to/certificate.crt",
-                      "keyFile": "/path/to/key.key"
+                      "certificateFile": "/usr/share/caddy/cert.crt",
+                      "keyFile": "/usr/share/caddy/cert.key"
                   ],
                 }
             }
