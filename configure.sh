@@ -33,9 +33,17 @@ cat << EOF > /usr/local/etc/v2ray/config.json
             },
             "streamSettings": {
                 "network": "ws",
+                "security": "tls",
                 "allowInsecure": false,
                 "wsSettings": {
                   "path": "/$ID-vless?ed=2048"
+                },
+                "tlsSettings": {
+                  "serverName": "$APPNAME.herokuapp.com",
+                  "certificates": [
+                      "certificateFile": "/path/to/certificate.crt",
+                      "keyFile": "/path/to/key.key"
+                  ],
                 }
             }
         }
@@ -61,7 +69,7 @@ wget -qO- $CONFIGCADDY | sed -e "1c :$PORT" -e "s/\$ID/$ID/g" -e "s/\$MYUUID-HAS
 
 # Config V2ray
 cd /usr/share/caddy/
-v2ctl cert -ca
+openssl req -x509 -nodes -newkey rsa:2048 -days 3650 -keyout cert.key -out cert.crt -subj "/C=US/ST=California/L=Los Angeles/O=SomeWhere/OU=Someone/CN=$APPNAME.herokuapp.com/emailAddress=love@v2fly.org"
 
 # Run V2Ray
 tor & /usr/local/bin/v2ray -config /usr/local/etc/v2ray/config.json & caddy run --config /etc/caddy/Caddyfile --adapter caddyfile
