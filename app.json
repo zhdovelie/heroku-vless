@@ -1,6 +1,6 @@
 {
-    "name": "XRay VLESS",
-    "description": "Deploy Xray VLESS on Heroku.",
+    "name": "V2Ray VLESS",
+    "description": "Deploy V2ray VLESS on Heroku.",
     "keywords": ["VLESS"],
     "env": {
         "CONFIGCADDY": {
