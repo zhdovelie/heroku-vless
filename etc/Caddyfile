@@ -1,5 +1,5 @@
 {
-   server :$PORT {
+   servers :$PORT {
       max_header_size 1280
       protocol {
           allow_h2c
