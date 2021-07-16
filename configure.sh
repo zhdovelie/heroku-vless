@@ -33,10 +33,15 @@ cat << EOF > /usr/local/etc/xray/config.json
                 "decryption": "none"
             },
             "streamSettings": {
-                "network": "ws",
+                "network": "kcp",
                 "allowInsecure": false,
-                "wsSettings": {
-                  "path": "/$ID-vless?ed=2048"
+                "kcpSettings": {
+                  "mtu": 1350,
+                  "congestion": true,
+                  "header": {
+                    "type": "utp"
+                  },
+                  "seed": "$ID"
                 }
             }
         }
