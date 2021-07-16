@@ -39,11 +39,10 @@ cat << EOF > /usr/local/etc/v2ray/config.json
                   "path": "/$ID-vless?ed=2048"
                 },
                 "tlsSettings": {
-                  "serverName": "$APPNAME.herokuapp.com",
                   "certificates": [
                       "certificateFile": "/usr/share/caddy/cert.crt",
                       "keyFile": "/usr/share/caddy/cert.key"
-                  ],
+                  ]
                 }
             }
         }
