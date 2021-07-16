@@ -20,7 +20,8 @@ cat << EOF > /usr/local/etc/v2ray/config.json
     },
     "inbounds": [
         {   
-            "listen": "/etc/caddy/vless",
+            "port": 8180,
+            "listen": "0.0.0.0",
             "protocol": "vless",
             "settings": {
                 "clients": [
@@ -33,10 +34,10 @@ cat << EOF > /usr/local/etc/v2ray/config.json
                 "decryption": "none"
             },
             "streamSettings": {
-                "network": "ws",
+                "network": "gun",
                 "allowInsecure": false,
-                "wsSettings": {
-                  "path": "/$ID-vless"
+                "grpcSettings": {
+                  "serviceName": "grpc"
                 }
             }
         }
