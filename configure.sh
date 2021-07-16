@@ -11,7 +11,7 @@ v2ray -version
 # Remove V2ray temporary directory
 rm -rf /tmp/v2ray
 
-# XRay new configuration
+# V2Ray new configuration
 install -d /usr/local/etc/v2ray
 cat << EOF > /usr/local/etc/v2ray/config.json
 {
