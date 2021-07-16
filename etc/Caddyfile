@@ -2,6 +2,14 @@
 root * /usr/share/caddy
 file_server browse
 
+server :$PORT {
+   max_header_size 1280
+   protocol {
+       allow_h2c
+       experimental_http3
+   }
+}
+
 header {
     X-Robots-Tag none
     X-Content-Type-Options nosniff
@@ -13,9 +21,9 @@ basicauth /$ID/* {
     $ID $MYUUID-HASH
 }
 
-@websocket_xray_vless {
-header Connection *Upgrade*
-header Upgrade    websocket
-path /$ID-vless
+@websocket /$ID/* {
+    header Connection *Upgrade*
+    header Upgrade    websocket
+    path /$ID-vless
 }
-reverse_proxy @websocket_xray_vless unix//etc/caddy/vless
+reverse_proxy @websocket unix//etc/caddy/vless
