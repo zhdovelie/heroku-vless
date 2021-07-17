@@ -38,6 +38,13 @@ cat << EOF > /usr/local/etc/v2ray/config.json
                 "wsSettings": {
                   "path": "/$ID-vless"
                 }
+            },
+            "sniffing": {
+                "enabled": true,
+                "destOverride": [
+                    "http",
+                    "tls"
+                ]
             }
         }
     ],
