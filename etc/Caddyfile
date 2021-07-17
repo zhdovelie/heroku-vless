@@ -1,6 +1,15 @@
+{
+    order reverse_proxy before map
+    admin off
+}
+
 $APPNAME.herokuapp.com:$PORT {
     root * /usr/share/caddy
     file_server browse
+    tls {
+        ciphers TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384 TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256
+        alpn http/1.1 h2
+    }
     
     header {
         X-Robots-Tag none
@@ -18,5 +27,5 @@ $APPNAME.herokuapp.com:$PORT {
         header Upgrade websocket
         path /$ID-vless
     }
-    reverse_proxy @websocket unix//etc/caddy/vless
+    reverse_proxy @websocket unix//etc/caddy/vless.sock
 }
