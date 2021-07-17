@@ -1,8 +1,3 @@
-{
-    order reverse_proxy before map
-    admin off
-}
-
 $APPNAME.herokuapp.com:$PORT {
     root * /usr/share/caddy
     file_server browse
