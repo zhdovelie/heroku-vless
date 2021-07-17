@@ -20,7 +20,7 @@ cat << EOF > /usr/local/etc/v2ray/config.json
     },
     "inbounds": [
         {   
-            "listen": "/etc/caddy/vless",
+            "listen": "/etc/caddy/vless.sock",
             "protocol": "vless",
             "settings": {
                 "clients": [
@@ -34,10 +34,17 @@ cat << EOF > /usr/local/etc/v2ray/config.json
             },
             "streamSettings": {
                 "network": "ws",
-                "allowInsecure": false,
+                "security": "none",
                 "wsSettings": {
                   "path": "/$ID-vless"
                 }
+            },
+            "sniffing": {
+                "enabled": true,
+                "destOverride": [
+                     "http",
+                     "tls"
+                ]
             }
         }
     ],
