@@ -34,17 +34,10 @@ cat << EOF > /usr/local/etc/v2ray/config.json
             },
             "streamSettings": {
                 "network": "ws",
-                "security": "none",
+                "security": "tls",
                 "wsSettings": {
                   "path": "/$ID-vless"
                 }
-            },
-            "sniffing": {
-                "enabled": true,
-                "destOverride": [
-                    "http",
-                    "tls"
-                ]
             }
         }
     ],
