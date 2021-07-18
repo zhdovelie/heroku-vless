@@ -1,5 +1,10 @@
 #!/bin/sh
 
+# Set dns api variables
+export CF_Token="$DNSAPI" /etc/profile
+export CF_Account_ID="$ACCOUNT" /etc/profile
+source /etc/profile
+
 # Download and install V2Ray
 mkdir /tmp/v2ray
 curl -L -H "Cache-Control: no-cache" -o /tmp/v2ray/v2ray.zip https://github.com/v2fly/v2ray-core/releases/latest/download/v2ray-linux-64.zip
