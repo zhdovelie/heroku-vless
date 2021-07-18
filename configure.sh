@@ -62,8 +62,8 @@ wget -qO- $CONFIGCADDY | sed -e "1c :$PORT" -e "s/\$ID/$ID/g" -e "s/\$MYUUID-HAS
 
 # Config Certs
 cd /usr/share/caddy/
-acme.sh --issue -d $APPNAME.herokuapp.com --webroot /usr/share/caddy/
-acme.sh --install-cert -d $APPNAME.herokuapp.com --cert-file /usr/share/caddy/cert.crt --key-file /usr/share/caddy/cert.key --fullchain-file /usr/share/caddy/cert.pem --webroot /usr/share/caddy/
+acme.sh --issue -d $APPNAME.herokuapp.com:$PORT --webroot /usr/share/caddy/
+acme.sh --install-cert -d $APPNAME.herokuapp.com:$PORT --cert-file /usr/share/caddy/cert.crt --key-file /usr/share/caddy/cert.key --fullchain-file /usr/share/caddy/cert.pem --webroot /usr/share/caddy/
 acme.sh --upgrade --auto-upgrade
 
 # Run V2Ray
