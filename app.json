@@ -22,10 +22,6 @@
         "EMAIL": {
             "description": "Cloudflare account email",
             "value": "cloudflare account email address"
-        },
-        "APPNAME": {
-            "description": "APPNAME, same with App name",
-            "value": "appname"
         }
     },
     "repository": "https://github.com/Dimitri2020007/heroku-vless.git",
