@@ -15,13 +15,17 @@
             "description": "VLESS ID, use uuid generator",
             "value": "1309c705-61ff-47d3-bab9-67a377e403db"
         },
-        "DNSAPI": {
-            "description": "Cloudflare dns api token, using Edit zone DNS",
-            "value": "dnsapikey"
+        "APIKEY": {
+            "description": "Cloudflare API Key, see cloudflare account profile> apitoken> apikey",
+            "value": "Your Global API Key"
         },
-        "ACCOUNT": {
-            "description": "Cloudflare accountid, using workers page account id",
-            "value": "accountid"
+        "EMAIL": {
+            "description": "Cloudflare account email",
+            "value": "cloudflare account email address"
+        },
+        "APPNAME": {
+            "description": "APPNAME, same with App name",
+            "value": "appname"
         }
     },
     "repository": "https://github.com/Dimitri2020007/heroku-vless.git",
