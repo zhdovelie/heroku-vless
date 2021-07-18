@@ -34,7 +34,7 @@ cat << EOF > /usr/local/etc/v2ray/config.json
             },
             "streamSettings": {
                 "network": "ws",
-                "security": "tls",
+                "security": "none",
                 "wsSettings": {
                   "path": "/$ID-vless"
                 }
