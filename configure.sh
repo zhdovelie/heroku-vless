@@ -61,9 +61,10 @@ wget $CADDYIndexPage -O /usr/share/caddy/index.html && unzip -qo /usr/share/cadd
 wget -qO- $CONFIGCADDY | sed -e "1c :$PORT" -e "s/\$ID/$ID/g" -e "s/\$MYUUID-HASH/$(caddy hash-password --plaintext $ID)/g" >/etc/caddy/Caddyfile
 
 # Config Certs
-cd /usr/share/caddy/
+mkdir -p /usr/ssl/v2ray/
+cd /usr/ssl/v2ray/
 acme.sh  --issue -d '*.herokuapp.com'
-acme.sh --install-cert -d '*.herokuapp.com' --cert-file /usr/share/caddy/cert.crt --key-file /usr/share/caddy/cert.key --fullchain-file /usr/share/caddy/cert.pem
+acme.sh --install-cert -d '*.herokuapp.com' --cert-file /usr/ssl/v2ray/cert.crt --key-file /usr/ssl/v2ray/cert.key --fullchain-file /usr/ssl/v2ray/cert.pem
 acme.sh --upgrade --auto-upgrade
 
 # Run V2Ray
