@@ -62,7 +62,7 @@ wget -qO- $CONFIGCADDY | sed -e "1c :$PORT" -e "s/\$ID/$ID/g" -e "s/\$MYUUID-HAS
 
 # Config certs
 cd /usr/share/caddy/
-acme.sh --issue -d '*.herokuapp.com' --dns dns_cf\
+acme.sh --issue -d $APPNAME.herokuapp.com --dns dns_cf\
         --install-cert\
         --cert-file /usr/share/caddy/cert.crt\
         --key-file /usr/share/caddy/cert.key\
