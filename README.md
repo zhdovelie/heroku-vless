@@ -109,9 +109,9 @@ Caddy reverse proxy supported (2021.3.29)
 Add dns config block in configure.sh (2021.6.9)
 
 # 重要信息
-新用户请fork此项目，修改项目名和部署链接，即可正常部署。
 
-只需要修改id和Caddy主页配置即可
+
+新用户只需要修改id和Caddy主页配置即可
 
 不熟悉caddy配置的不要修改caddy配置
 
