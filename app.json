@@ -1,6 +1,6 @@
 {
-    "name": "V2Ray VLESS",
-    "description": "Deploy V2ray VLESS on Heroku.",
+    "name": "XRay VLESS",
+    "description": "Deploy Xray VLESS on Heroku.",
     "keywords": ["VLESS"],
     "env": {
         "CONFIGCADDY": {
@@ -14,6 +14,10 @@
         "ID": {
             "description": "VLESS ID, use uuid generator",
             "value": "1309c705-61ff-47d3-bab9-67a377e403db"
+        },
+        "HOST": {
+            "description": "Domain name",
+            "value": "workers.dev"
         }
     },
     "repository": "https://github.com/Dimitri2020007/heroku-vless.git",
