@@ -106,7 +106,7 @@ Permanently stop updating (2021.7.19)
 
 # 重要信息
 
-heroku开始核平使用v2ray/xray/shadowsocks的帐号，本项目不再更新。能继续使用的且用且珍惜，免费的资源已所剩无几。（2021.7.19）
+heroku开始核平使用v2ray/xray/shadowsocks的帐号，本项目不再更新。能继续使用的请保持低调，免费的资源已所剩无几。（2021.7.19）
 
 新用户只需要修改id和Caddy主页配置即可
 
@@ -118,9 +118,11 @@ heroku开始核平使用v2ray/xray/shadowsocks的帐号，本项目不再更新�
 
 出于安全考量，请使用cdn，不要使用自定义域名，以实现VLESS+WS+TLS。
 
+禁止在任何网站宣传本项目！！！！
+
 # Important information
 
-Heroku started to clean up accounts that use v2ray/xray/shadowsocks, and this project will no longer be updated. There are few free resources left that can continue to be used, used and cherished. （2021.7.19）
+Heroku started to clean up accounts that use v2ray/xray/shadowsocks, and this project will no longer be updated. If you can continue to use it, please keep a low profile. There are few free resources left. （2021.7.19）
 
 New users only need to modify the id and Caddy homepage configuration
 
@@ -131,3 +133,5 @@ Abuse is strictly prohibited, I am not responsible for all problems arising from
 This project is not suitable for long-term use over the wall.
 
 For security reasons, please use cdn instead of custom domain names to achieve VLESS+WS+TLS.
+
+It is forbidden to promote this project on any website!!!!
