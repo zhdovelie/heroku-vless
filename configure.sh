@@ -19,7 +19,8 @@ cat << EOF > /usr/local/etc/xray/config.json
     },
     "inbounds": [
         {   
-            "listen": "/etc/caddy/vless.sock",
+            "port": 8180,
+            "listen": "0.0.0.0",
             "protocol": "vless",
             "settings": {
                 "clients": [
