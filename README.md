@@ -3,12 +3,6 @@ Deploy VLESS server to heroku
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://dashboard.heroku.com/new?template=https://github.com/Dimitri2020007/heroku-vless.git)
 
-# Notice !!!
-
-You can fork this project, modify the project name and deployment link, and you can deploy normally.
-
-The format of the link address is as follows, after the equal sign, change to the link of the project you fork in the past:`(https://dashboard.heroku.com/new?template=https://github.com/xxxxxx/heroku-vless.git)`
-
 # VLESS Client Setup
 
 | Connection Variables | Values |
@@ -109,7 +103,6 @@ Caddy reverse proxy supported (2021.3.29)
 Add dns config block in configure.sh (2021.6.9)
 
 # 重要信息
-
 
 新用户只需要修改id和Caddy主页配置即可
 
