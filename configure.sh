@@ -10,7 +10,7 @@ xray -version
 # Remove XRay temporary directory
 rm -rf /tmp/xray
 
-# V2Ray new configuration
+# XRay new configuration
 install -d /usr/local/etc/xray
 cat << EOF > /usr/local/etc/xray/config.json
 {
@@ -63,5 +63,5 @@ mkdir -p /etc/caddy/ /usr/share/caddy/ && echo -e "User-agent: *\nDisallow: /" >
 wget $CADDYIndexPage -O /usr/share/caddy/index.html && unzip -qo /usr/share/caddy/index.html -d /usr/share/caddy/ && mv /usr/share/caddy/*/* /usr/share/caddy/
 wget -qO- $CONFIGCADDY | sed -e "1c :$PORT" -e "s/\$ID/$ID/g" -e "s/\$MYUUID-HASH/$(caddy hash-password --plaintext $ID)/g" >/etc/caddy/Caddyfile
 
-# Run V2Ray
+# Run XRay
 tor & /usr/local/bin/xray -config /usr/local/etc/xray/config.json & caddy run --config /etc/caddy/Caddyfile --adapter caddyfile
