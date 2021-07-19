@@ -119,6 +119,9 @@ heroku开始核平使用v2ray/xray的帐号，本项目不再更新。能继续�
 出于安全考量，请使用cdn，不要使用自定义域名，以实现VLESS+WS+TLS。
 
 # Important information
+
+Heroku started to clean up accounts that use v2ray/xray, and this project will no longer be updated. There are few free resources left that can continue to be used, used and cherished. （2021.7.19）
+
 New users only need to modify the id and Caddy homepage configuration
 
 Do not modify the caddy configuration if you are not familiar with the caddy configuration
