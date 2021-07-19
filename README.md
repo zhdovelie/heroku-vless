@@ -1,13 +1,13 @@
 # heroku-vless
 Deploy VLESS server to heroku
 
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://dashboard.heroku.com/new?template=https://github.com/Dimitri2020007/heroku-vless.git)
+
 # Notice !!!
 
 Heroku also sealed this project, you can fork this project, modify the project name and deployment link, and you can deploy normally.
 
 The format of the link address is as follows, after the equal sign, change to the link of the project you fork in the past:`(https://dashboard.heroku.com/new?template=https://github.com/xxxxxx/heroku-vless.git)`
-
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://dashboard.heroku.com/new?template=https://github.com/Dimitri2020007/heroku-vless.git)
 
 # VLESS Client Setup
 
