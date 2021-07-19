@@ -21,7 +21,7 @@ basicauth /$ID/* {
 }
 reverse_proxy @websocket unix//etc/caddy/vless.sock
 
-reverse_proxy /$ID-vless 127.0.0.1:8180 {
+reverse_proxy /http 127.0.0.1:8180 {
     transport http {
         versions h2c
     }
