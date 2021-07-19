@@ -33,12 +33,12 @@ cat << EOF > /usr/local/etc/xray/config.json
                 "decryption": "none"
             },
             "streamSettings": {
-                "network": "h2",
                 "security": "none",
+                "network": "h2",
                 "httpSettings": {
-                  "path": "/http2"
+                  "path": "/http",
                   "host": [
-                      "$HOST"
+                    "$HOST"
                   ]
                 }
             }
