@@ -19,6 +19,14 @@ Deploy VLESS server to heroku
 | `Transport` | ws |
 | `Tls` | Tls must open, otherwise your network was insecure! |
 
+# Client Ws+Tls+Xtls-rprx-direct(Flow) Support Status
+| Client | Status |
+| ------ | ------ |
+| `2dust V2RayN` </br> `2dust V2RayNG` | Ws+Tls+Flow |
+| `OpenWrt SSRPlus` | Ws+Tls |
+| `OpenWrt Passwall` | Ws+Tls |
+| `QV2Ray` | Ws+Tls |
+
 # Cloudflare Reverse Proxy Code (Choose one from both examples)
 
 example 1
