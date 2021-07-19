@@ -36,7 +36,7 @@ cat << EOF > /usr/local/etc/xray/config.json
                 "network": "h2",
                 "security": "none",
                 "httpSettings": {
-                  "path": "/$ID-vless"
+                  "path": "/http2"
                   "host": [
                       "$HOST"
                   ]
