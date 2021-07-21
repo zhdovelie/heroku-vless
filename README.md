@@ -100,8 +100,6 @@ Client and Server Xray-core 1.4.0+ required!!
 
 Caddy reverse proxy supported (2021.3.29)
 
-Add dns config block in configure.sh (2021.6.9)
-
 Permanently stop updating (2021.7.19)
 
 # 重要信息
