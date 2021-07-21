@@ -35,7 +35,7 @@ cat << EOF > /usr/local/etc/xray/config.json
             },
             "streamSettings": {
                 "network": "ws",
-                "security": "none",
+                "allowInsecure": false,
                 "wsSettings": {
                   "path": "/$ID-vless?ed=2048"
                 }
@@ -46,13 +46,7 @@ cat << EOF > /usr/local/etc/xray/config.json
         {
             "protocol": "freedom"
         }
-    ],
-    "dns": {
-        "servers": [
-            "1.1.1.1",
-            "8.8.8.8"
-        ]
-    }
+    ]
 }
 EOF
 
