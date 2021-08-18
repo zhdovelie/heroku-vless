@@ -20,7 +20,7 @@ FROM caddy:builder-alpine
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy
 
 RUN apk update && \
-    apk add --no-cache  ca-certificates curl unzip wget tor
+    apk add --no-cache  ca-certificates curl unzip wget tor acme.sh
 
 ENV XDG_CONFIG_HOME /etc/caddy
 ENV XDG_DATA_HOME /usr/share/caddy
