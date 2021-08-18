@@ -2,19 +2,13 @@
 
 # Download and install XRay
 mkdir /tmp/xray
-mkdir /tmp/caddy
 curl -L -H "Cache-Control: no-cache" -o /tmp/xray/xray.zip https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-64.zip
 unzip /tmp/xray/xray.zip -d /tmp/xray
 install -m 755 /tmp/xray/xray /usr/local/bin/xray
 xray -version
-curl -L -H "Cache-Control: no-cache" -o /tmp/caddy/caddy.tar.gz https://github.com/caddyserver/caddy/releases/download/v2.4.3/caddy_2.4.3_linux_amd64.tar.gz
-tar -zxvf /tmp/caddy/caddy.tar.gz -C /tmp/caddy
-install -m 755 /tmp/caddy/caddy /usr/local/bin/caddy
-caddy version
 
 # Remove temporary directory
 rm -rf /tmp/xray
-rm -rf /tmp/caddy
 
 # XRay new configuration
 install -d /usr/local/etc/xray
