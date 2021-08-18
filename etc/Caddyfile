@@ -26,4 +26,4 @@ basicauth /$ID/* {
     header Upgrade websocket
     path /$ID-vless
 }
-reverse_proxy @websocket 127.0.0.1:8180
+reverse_proxy @websocket unix//etc/caddy/vless
