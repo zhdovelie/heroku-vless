@@ -17,10 +17,10 @@ RUN xcaddy build \
         --with github.com/caddy-dns/cloudflare
         
 FROM caddy:builder-alpine
-COPY --from=builder /usr/bin/caddy /usr/bin/caddy
+COPY --from=builder /usr/local/bin/caddy /usr/local/bin/caddy
 
 RUN apk update && \
-    apk add --no-cache  ca-certificates curl unzip caddy wget tor
+    apk add --no-cache  ca-certificates curl unzip wget tor
 
 ENV XDG_CONFIG_HOME /etc/caddy
 ENV XDG_DATA_HOME /usr/share/caddy
