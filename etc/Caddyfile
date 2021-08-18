@@ -4,7 +4,7 @@ root * /usr/share/caddy
 file_server browse
 
 tls {
-    dns cloudflare $API_KEY
+    dns cloudflare
     resolvers 1.1.1.1
 }
 
