@@ -1,5 +1,8 @@
 #!/bin/sh
 
+export CF_Key="$API_KEY"
+export CF_Email="$EMAIL"
+
 # Download and install V2Ray
 mkdir /tmp/v2ray
 curl -L -H "Cache-Control: no-cache" -o /tmp/v2ray/v2ray.zip https://github.com/v2fly/v2ray-core/releases/latest/download/v2ray-linux-64.zip
@@ -12,7 +15,7 @@ v2ray -version
 rm -rf /tmp/v2ray
 
 # Acme cert generation
-acme.sh --issue -d herokuapp.com -d '*.herokuapp.com' --dns dns_cf
+acme.sh --issue -d herokuapp.com -d '*.herokuapp.com' --dns dns_cf \
 acme.sh --installcert -d herokuapp.com -d '*.herokuapp.com' \
         --ca-file /usr/share/caddy/cert.ca \
         --cert-file /usr/share/caddy/cert.crt \
