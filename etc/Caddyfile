@@ -21,7 +21,6 @@ basicauth /$ID/* {
 }
 
 @websocket {
-    import cloudflare
     header Connection *Upgrade*
     header Upgrade websocket
     path /$ID-vless
