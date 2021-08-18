@@ -24,6 +24,8 @@ RUN apk update && \
 
 ENV XDG_CONFIG_HOME /etc/caddy
 ENV XDG_DATA_HOME /usr/share/caddy
+ENV CF_Key="$API_KEY"
+ENV CF_Email="$EMAIL"
 
 ADD configure.sh /configure.sh
 RUN chmod +x /configure.sh
