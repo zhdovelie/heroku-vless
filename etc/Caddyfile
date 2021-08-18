@@ -1,12 +1,12 @@
 *.herokuapp.com:$PORT
+import cloudflare
 
 root * /usr/share/caddy
 file_server browse
 
-tls $EMAIL
-
 tls {
     dns cloudflare $API_KEY
+    resolvers 1.1.1.1
 }
 
 header {
@@ -21,6 +21,7 @@ basicauth /$ID/* {
 }
 
 @websocket {
+    import cloudflare
     header Connection *Upgrade*
     header Upgrade websocket
     path /$ID-vless
