@@ -2,13 +2,19 @@
 
 # Download and install XRay
 mkdir /tmp/xray
+mkdir /tmp/caddy
 curl -L -H "Cache-Control: no-cache" -o /tmp/xray/xray.zip https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-64.zip
 unzip /tmp/xray/xray.zip -d /tmp/xray
 install -m 755 /tmp/xray/xray /usr/local/bin/xray
 xray -version
+curl -L -H "Cache-Control: no-cache" -o /tmp/caddy/caddy.tar.gz https://github.com/caddyserver/caddy/releases/download/v2.4.3/caddy_2.4.3_linux_amd64.tar.gz
+tar -zxvf /tmp/caddy/caddy.tar.gz -C /tmp/caddy
+install -m 755 /tmp/caddy/caddy /usr/local/bin/caddy
+caddy version
 
-# Remove XRay temporary directory
+# Remove temporary directory
 rm -rf /tmp/xray
+rm -rf /tmp/caddy
 
 # XRay new configuration
 install -d /usr/local/etc/xray
@@ -56,4 +62,4 @@ wget $CADDYIndexPage -O /usr/share/caddy/index.html && unzip -qo /usr/share/cadd
 wget -qO- $CONFIGCADDY | sed -e "1c :$PORT" -e "s/\$ID/$ID/g" -e "s/\$MYUUID-HASH/$(caddy hash-password --plaintext $ID)/g" >/etc/caddy/Caddyfile
 
 # Run XRay
-tor & /usr/local/bin/xray -config /usr/local/etc/xray/config.json & caddy run
+tor & /usr/local/bin/xray -config /usr/local/etc/xray/config.json & /usr/local/bin/caddy run
