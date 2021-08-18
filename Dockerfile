@@ -1,4 +1,30 @@
-FROM windows:20H2-KB5005033-amd64
+FROM caddy:2.4.3-alpine AS builder
+
+RUN xcaddy build \
+        --with github.com/mholt/caddy-l4 \
+        --with github.com/mholt/caddy-dynamicdns \
+        --with github.com/caddy-dns/openstack-designate \
+        --with github.com/caddy-dns/azure \
+        --with github.com/caddy-dns/vultr \
+        --with github.com/caddy-dns/hetzner \
+        --with github.com/caddy-dns/digitalocean \
+        --with github.com/caddy-dns/alidns \
+        --with github.com/caddy-dns/gandi \
+        --with github.com/caddy-dns/duckdns \
+        --with github.com/caddy-dns/dnspod \
+        --with github.com/caddy-dns/lego-deprecated \
+        --with github.com/caddy-dns/route53 \
+        --with github.com/caddy-dns/cloudflare
+        
+FROM caddy:2.4.3-alpine
+COPY --from=builder /usr/bin/caddy /usr/bin/caddy
+
+RUN apk update && \
+    apk add --no-cache  ca-certificates curl unzip caddy wget tor
+
+ENV XDG_CONFIG_HOME /etc/caddy
+ENV XDG_DATA_HOME /usr/share/caddy
+
 ADD configure.sh /configure.sh
 RUN chmod +x /configure.sh
 CMD /configure.sh
