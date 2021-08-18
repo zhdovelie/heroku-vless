@@ -102,7 +102,7 @@ Client and Server Xray-core 1.4.0+ required!!
 
 Caddy reverse proxy supported (2021.3.29)
 
-Permanently stop updating (2021.7.19)
+Since Xray has not been updated for more than 2 months, it will be rolled back to v2ray. (2021.8.18)
 
 # 重要信息
 
