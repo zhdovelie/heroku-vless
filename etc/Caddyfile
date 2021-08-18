@@ -3,6 +3,8 @@
 root * /usr/share/caddy
 file_server browse
 
+{env.HOME /usr/local/bin/}
+
 header {
     X-Robots-Tag none
     X-Content-Type-Options nosniff
