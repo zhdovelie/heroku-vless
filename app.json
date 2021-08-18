@@ -3,10 +3,6 @@
     "description": "Deploy Xray VLESS on Heroku.",
     "keywords": ["VLESS"],
     "env": {
-        "EMAIL": {
-            "description": "Cloudflare email",
-            "value": "email"
-        },
         "API_KEY": {
             "description": "Cloudflare dns api key",
             "value": "api token"
