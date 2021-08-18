@@ -9,6 +9,8 @@ tls {
 }
 
 header {
+    Permissions-Policy interest-cohort=()
+    Strict-Transport-Security max-age=31536000;
     X-Robots-Tag none
     X-Content-Type-Options nosniff
     X-Frame-Options DENY
