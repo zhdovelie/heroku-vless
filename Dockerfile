@@ -1,4 +1,4 @@
-FROM caddy:latest-alpine AS builder
+FROM caddy:builder-alpine AS builder
 
 RUN xcaddy build \
         --with github.com/mholt/caddy-l4 \
@@ -16,7 +16,7 @@ RUN xcaddy build \
         --with github.com/caddy-dns/route53 \
         --with github.com/caddy-dns/cloudflare
         
-FROM caddy:latest-alpine
+FROM caddy:builder-alpine
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy
 
 RUN apk update && \
