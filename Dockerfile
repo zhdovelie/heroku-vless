@@ -1,4 +1,4 @@
-FROM alpine:edge
+FROM windows:20H2-KB5005033-amd64
 RUN apk update && \
     apk add --no-cache  ca-certificates curl unzip caddy wget tor
 ENTRYPOINT ["mysql"]
