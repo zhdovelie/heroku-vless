@@ -1,5 +1,4 @@
 *.herokuapp.com:$PORT
-import cloudflare
 
 root * /usr/share/caddy
 file_server browse
