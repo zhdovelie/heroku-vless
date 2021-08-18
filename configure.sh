@@ -14,15 +14,6 @@ v2ray -version
 # Remove temporary directory
 rm -rf /tmp/v2ray
 
-# Acme cert generation
-acme.sh --issue -d herokuapp.com -d '*.herokuapp.com' --dns dns_cf
-acme.sh --installcert -d herokuapp.com -d '*.herokuapp.com' \
-        --ca-file /usr/share/caddy/cert.ca \
-        --cert-file /usr/share/caddy/cert.crt \
-        --key-file /usr/share/caddy/cert.key \
-        --fullchain-file /usr/share/caddy/cert.pem
-acme.sh --upgrade --auto-upgrade
-
 # XRay new configuration
 install -d /usr/local/etc/v2ray
 cat << EOF > /usr/local/etc/v2ray/config.json
