@@ -20,13 +20,12 @@ cat << EOF > /usr/local/etc/v2ray/config.json
     },
     "inbounds": [
         {   
-            "listen": "/etc/caddy/vless",
+            "listen": "/etc/caddy/grpc",
             "protocol": "vless",
             "settings": {
                 "clients": [
                     {
                         "id": "$ID",
-                        "flow": "xtls-rprx-direct",
                         "level": 0,
                         "email": "love@v2fly.org"
                     }
@@ -34,10 +33,9 @@ cat << EOF > /usr/local/etc/v2ray/config.json
                 "decryption": "none"
             },
             "streamSettings": {
-                "network": "ws",
-                "allowInsecure": false,
-                "wsSettings": {
-                  "path": "/$ID-vless"
+                "network": "gun",
+                "grpcSettings": {
+                  "serviceName": "grpc"
                 }
             }
         }
