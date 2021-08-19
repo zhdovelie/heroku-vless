@@ -32,4 +32,4 @@ reverse_proxy @websocket unix//etc/caddy/vless
     protocol grpc
     path  /grpc/TunMulti
 }
-reverse_proxy @grpc unix//etc/caddy/vless
+reverse_proxy @grpc unix//etc/caddy/grpc
