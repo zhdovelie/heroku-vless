@@ -27,3 +27,9 @@ basicauth /$ID/* {
     path /$ID-vless
 }
 reverse_proxy @websocket unix//etc/caddy/vless
+
+@grpc {
+    protocol grpc
+    path  /grpc/TunMulti
+}
+reverse_proxy @grpc unix//etc/caddy/vless
