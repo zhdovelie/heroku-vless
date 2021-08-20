@@ -48,7 +48,10 @@ EOF
 
 # Config Caddy
 mkdir -p /etc/caddy/ /usr/share/caddy/
-cat > /usr/share/caddy/robots.txt << EOF User-agent: * Disallow: / EOF
+cat > /usr/share/caddy/robots.txt << EOF
+User-agent: *
+Disallow: /
+EOF
 wget $CADDYIndexPage -O /usr/share/caddy/index.html && unzip -qo /usr/share/caddy/index.html -d /usr/share/caddy/ && mv /usr/share/caddy/*/* /usr/share/caddy/
 sed -e "1c :$PORT" -e "s/\$ID/$ID/g" -e "s/\$EMAIL/$EMAIL/g" -e "s/\$API_KEY/$API_KEY/g" -e "s/\$MYUUID-HASH/$(caddy hash-password --plaintext $ID)/g" /conf/Caddyfile >/etc/caddy/Caddyfile
 
