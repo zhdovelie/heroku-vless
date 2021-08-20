@@ -8,7 +8,7 @@
             "value": "email"
         },
         "API_KEY": {
-            "description": "Cloudflare dns api key",
+            "description": "Cloudflare dns global api key",
             "value": "api token"
         },
         "CADDYIndexPage": {
