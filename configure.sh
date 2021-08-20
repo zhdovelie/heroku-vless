@@ -54,7 +54,6 @@ Disallow: /
 EOF
 wget $CADDYIndexPage -O /usr/share/caddy/index.html && unzip -qo /usr/share/caddy/index.html -d /usr/share/caddy/ && mv /usr/share/caddy/*/* /usr/share/caddy/
 sed -e "1c :$PORT" -e "s/\$ID/$ID/g" -e "s/\$API_KEY/$API_KEY/g" -e "s/\$MYUUID-HASH/$(caddy hash-password --plaintext $ID)/g" /conf/Caddyfile >/etc/caddy/Caddyfile
-echo /etc/caddy/Caddyfile
 
 # Remove temporary directory
 rm -rf /tmp/v2ray
