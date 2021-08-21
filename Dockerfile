@@ -35,6 +35,7 @@ RUN apk update && \
     install -m 755 /tmp/v2ray/v2ctl /usr/local/bin/v2ctl && \
     v2ray -version && \
     rm -rf /var/cache/apk/* && \
+    rm -rf /tmp/v2ray && \
     apk del .build-deps
 
 ENV XDG_CONFIG_HOME /etc/caddy
