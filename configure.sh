@@ -1,13 +1,5 @@
 #!/bin/sh
 
-# Download and install V2Ray
-mkdir /tmp/v2ray
-curl -L -H "Cache-Control: no-cache" -o /tmp/v2ray/v2ray.zip https://github.com/v2fly/v2ray-core/releases/latest/download/v2ray-linux-64.zip
-unzip /tmp/v2ray/v2ray.zip -d /tmp/v2ray
-install -m 755 /tmp/v2ray/v2ray /usr/local/bin/v2ray
-install -m 755 /tmp/v2ray/v2ctl /usr/local/bin/v2ctl
-v2ray -version
-
 # VLESS new configuration
 install -d /usr/local/etc/v2ray
 cat << EOF > /usr/local/etc/v2ray/config.json
@@ -56,7 +48,6 @@ wget $CADDYIndexPage -O /usr/share/caddy/index.html && unzip -qo /usr/share/cadd
 sed -e "1c :$PORT" -e "s/\$ID/$ID/g" -e "s/\$EMAIL/$EMAIL/g" -e "s/\$API_KEY/$API_KEY/g" -e "s/\$MYUUID-HASH/$(caddy hash-password --plaintext $ID)/g" /conf/Caddyfile >/etc/caddy/Caddyfile
 
 # Remove temporary directory
-rm -rf /tmp/v2ray
 rm -rf /conf
 
 # Run VLESS
