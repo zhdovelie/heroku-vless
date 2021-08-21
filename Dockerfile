@@ -27,7 +27,9 @@ FROM caddy:builder-alpine
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy
 
 RUN apk update && \
-    apk add --no-cache  ca-certificates curl unzip wget nss-tools
+    apk add --no-cache --virtual .build-deps ca-certificates curl unzip wget nss-tools && \
+    rm -rf /var/cache/apk/* && \
+    apk del .build-deps
 
 ENV XDG_CONFIG_HOME /etc/caddy
 ENV XDG_DATA_HOME /usr/share/caddy
