@@ -2,7 +2,10 @@
 ## Deploy VLESS server to heroku
 ## 请使用者保持低调，免费的资源已所剩无几
 ## 请将本项目fork之后把部署地址后面的名字改成自己的
+## 禁止在任何网站宣传本项目！！！！
+
 ## Friendly reminder: After fork this project, change heroku deploy address to your own name.
+## It is forbidden to promote this project on any website!!!!
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://dashboard.heroku.com/new?template=https://github.com/Dimitri2020007/heroku-vless.git)
 
@@ -106,10 +109,6 @@ Caddy reverse proxy supported (2021.3.29)
 Since Xray has not been updated for more than 2 months, it will be rolled back to v2ray. (2021.8.18)
 
 # 重要信息
-
-请使用者保持低调，免费的资源已所剩无几。（2021.7.19）
-
-请将本项目fork之后把部署地址后面的名字改成自己的。（2021.8.18）
 
 新用户只需要修改id和Caddy主页配置即可
 
