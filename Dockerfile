@@ -1,4 +1,4 @@
-FROM caddy:builder-alpine:edge AS builder
+FROM caddy:builder-alpine AS builder
 
 RUN xcaddy build \
         --with github.com/mholt/caddy-l4 \
