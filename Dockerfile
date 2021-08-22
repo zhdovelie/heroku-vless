@@ -23,7 +23,7 @@ RUN xcaddy build \
         --with github.com/caddy-dns/route53 \
         --with github.com/caddy-dns/cloudflare
         
-FROM caddy:builder-alpine:edge
+FROM caddy:builder-alpine
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy
 
 RUN apk update && \
