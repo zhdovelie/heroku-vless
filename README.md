@@ -1,7 +1,7 @@
 # heroku-vless
 ## Deploy VLESS server to heroku
 ## 请使用者保持低调，免费的资源已所剩无几
-## 请务必将本项目fork之后把部署地址后面的名字改成自己的，非常重要，切记！！！！
+## https://dashboard.heroku.com/new?template=https://github.com/xxx/vless-heroku.git Fork本项目之后将xxx改成自己的名字，非常重要，切记！！！！
 ## 禁止在任何网站宣传本项目！！！！
 
 ## Friendly reminder: After fork this project, change heroku deploy address to your own name.
