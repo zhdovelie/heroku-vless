@@ -28,10 +28,3 @@ header Upgrade    websocket
 path /$ID-vless
 }
 reverse_proxy @websocket_v2ray_vless unix//etc/caddy/vless
-
-@websocket_v2ray_trojan {
-header Connection *Upgrade*
-header Upgrade    websocket
-path /$ID-trojan
-}
-reverse_proxy @websocket_v2ray_trojan unix//etc/caddy/vless
