@@ -29,19 +29,13 @@ COPY --from=builder /usr/bin/caddy /usr/bin/caddy
 RUN apk update && \
     apk add --no-cache --virtual .build-deps ca-certificates curl unzip wget nss-tools && \
     mkdir /tmp/v2ray && \
-    mkdir /tmp/trojan && \
     curl -L -H "Cache-Control: no-cache" -o /tmp/v2ray/v2ray.zip https://github.com/v2fly/v2ray-core/releases/latest/download/v2ray-linux-64.zip && \
     unzip /tmp/v2ray/v2ray.zip -d /tmp/v2ray && \
     install -m 755 /tmp/v2ray/v2ray /usr/local/bin/v2ray && \
     install -m 755 /tmp/v2ray/v2ctl /usr/local/bin/v2ctl && \
     v2ray -version && \
-    curl -L -H "Cache-Control: no-cache" -o /tmp/trojan/trojan-go.zip https://github.com/p4gefau1t/trojan-go/releases/download/v0.10.4/trojan-go-linux-amd64.zip && \
-    unzip /tmp/trojan/trojan-go.zip -d /tmp/trojan && \
-    install -m 755 /tmp/trojan/trojan-go /usr/local/bin/trojan-go && \
-    trojan-go -version && \
     rm -rf /var/cache/apk/* && \
     rm -rf /tmp/v2ray && \
-    rm -rf /tmp/trojan && \
     apk del .build-deps
 
 ENV XDG_CONFIG_HOME /etc/caddy
