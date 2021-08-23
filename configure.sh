@@ -28,6 +28,27 @@ cat << EOF > /usr/local/etc/v2ray/config.json
                   "path": "/$ID-vless"
                 }
             }
+        },
+        {
+            "listen": "/etc/caddy/trojan",
+            "protocol": "trojan",
+            "settings": {
+                "clients": [
+                    {
+                        "id": "$ID",
+                        "level": 0,
+                        "email": "love@v2fly.org"
+                    }
+                ],
+                "decryption": "none"
+            },
+            "streamSettings": {
+                "network": "ws",
+                "allowInsecure": false,
+                "wsSettings": {
+                  "path": "/$ID-trojan"
+                }
+            }
         }
     ],
     "outbounds": [
