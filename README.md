@@ -31,7 +31,7 @@
 | `2dust V2RayN` </br> `2dust V2RayNG` | Ws+Tls+Flow |
 | `OpenWrt SSRPlus` | Ws+Tls |
 | `OpenWrt Passwall` | Ws+Tls |
-| `~~QV2Ray~~` | ~~Ws+Tls~~ |
+| ~~`QV2Ray`~~ | ~~Ws+Tls~~ |
 
 # Cloudflare Reverse Proxy Code (Choose one from both examples)
 
