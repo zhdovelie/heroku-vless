@@ -3,7 +3,10 @@
 root * /usr/share/caddy
 file_server browse
 
-tls internal
+tls $EMAIL {
+    dns cloudflare $API_KEY
+    resolvers 8.8.4.4
+}
 
 header {
     Permissions-Policy interest-cohort=()
