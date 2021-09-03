@@ -3,9 +3,8 @@
 root * /usr/share/caddy
 file_server browse
 
-acme {
-    email $EMAIL
-    dns cloudflare $API_KEY
+tls $EMAIL {
+    acme_dns cloudflare $API_KEY
     resolvers 8.8.4.4
 }
 
