@@ -34,7 +34,13 @@ cat << EOF > /usr/local/etc/v2ray/config.json
         {
             "protocol": "freedom"
         }
-    ]
+    ],
+    "dns": {
+        "servers": [
+            "https://dns.google/dns-query",
+            "https://cloudflare-dns.com/dns-query"
+        ]
+    }
 }
 EOF
 
