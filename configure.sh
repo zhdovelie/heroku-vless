@@ -11,6 +11,10 @@ cat << EOF > /usr/local/etc/v2ray/config.json
         {   
             "listen": "/etc/caddy/vless",
             "protocol": "vless",
+            "sniffing": {
+                "enabled": true,
+                "destOverride": ["http","tls"]
+            },
             "settings": {
                 "clients": [
                     {
