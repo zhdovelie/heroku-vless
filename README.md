@@ -16,7 +16,7 @@
 | Connection Variables | Values |
 | -------------------- | ------ |
 | `Address` | yourAppName.herokuapp.com </br> Cloudflare Reverse Proxy IP |
-| `SNI` | none |
+| `SNI` | Cloudflare Reverse Proxy Domain Name |
 | `AllowInsecure` | false |
 | `Port` | 443 |
 | `Host` | yourAppName.herokuapp.com </br> Cloudflare Reverse Proxy Domain Name |
