@@ -5,7 +5,7 @@
 ## 禁止在任何网站宣传本项目！！！！
 ## 带有删除线的部分表示不适用或已经废弃
 
-## Friendly reminder: After fork this project, change heroku deploy address to your own name.
+## Fork this project, replace Dimitri2020007 in readme.md with your own user name before deploying, it is very important, remember!!!!
 ## The part with a strikethrough indicates that it is not applicable or has been obsoleted
 ## It is forbidden to promote this project on any website!!!!
 
