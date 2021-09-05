@@ -126,8 +126,6 @@ Since Xray has not been updated for more than 2 months, it will be rolled back t
 
 # Important information
 
-Heroku started to clean up accounts that use v2ray/xray/shadowsocks, and this project will no longer be updated. If you can continue to use it, please keep a low profile. There are few free resources left. （2021.7.19）
-
 New users only need to modify the id and Caddy homepage configuration
 
 Do not modify the caddy configuration if you are not familiar with the caddy configuration
