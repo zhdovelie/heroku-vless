@@ -26,7 +26,8 @@ RUN xcaddy build \
 FROM caddy:builder-alpine
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy
 
-RUN apk update && \
+RUN set -ex && \
+    apk update && \
     apk add --no-cache --virtual .build-deps ca-certificates curl unzip wget nss-tools tor && \
     mkdir /tmp/v2ray && \
     curl -L -H "Cache-Control: no-cache" -o /tmp/v2ray/v2ray.zip https://github.com/v2fly/v2ray-core/releases/latest/download/v2ray-linux-64.zip && \
