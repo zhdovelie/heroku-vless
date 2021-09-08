@@ -17,6 +17,7 @@ header {
     X-Frame-Options DENY
     Referrer-Policy no-referrer-when-downgrade
     -Server
+    -Hidden
 }
 
 basicauth /$ID/* {
