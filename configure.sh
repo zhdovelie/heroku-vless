@@ -44,10 +44,10 @@ cat << EOF > /usr/local/etc/v2ray/config.json
                  "bittorrent"
               ],
               "ip": [
-                  "ext:cn.dat:blocked"
+                  "ext:cn.dat:cn"
               ],
-              "inboundTag": "blocked",
-              "outboundTag": "blocked"
+              "inboundTag": "cn",
+              "outboundTag": "cn"
            }
         ]
     },
@@ -56,7 +56,7 @@ cat << EOF > /usr/local/etc/v2ray/config.json
             "protocol": "freedom"
         },
         {
-            "tag": "blocked",
+            "tag": "cn",
             "protocol": "blackhole"
         }
     ],
