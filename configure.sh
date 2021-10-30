@@ -57,7 +57,7 @@ cat << EOF > /usr/local/etc/v2ray/config.json
         },
         {
             "tag": "blocked",
-            "protocol": "blackhole",
+            "protocol": "blackhole"
         }
     ],
     "dns": {
