@@ -87,7 +87,7 @@ addEventListener(
 
 # 重要信息
 
-新用户只需要修改id和Caddy主页配置即可
+新用户只需要修改id即可
 
 不熟悉caddy配置的不要修改caddy配置
 
@@ -101,7 +101,7 @@ addEventListener(
 
 # Important information
 
-New users only need to modify the id and Caddy homepage configuration
+New users only need to modify the id
 
 Do not modify the caddy configuration if you are not familiar with the caddy configuration
 
