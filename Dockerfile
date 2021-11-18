@@ -5,4 +5,4 @@ RUN apk update \
     && rm -rf /var/cache/apk/* \
     && apk del .build-deps \
     && chmod +x /configure.sh
-ENTRYPOINT ["sh", "-c", "configure.sh"]
+ENTRYPOINT ["sh", "-c", "/configure.sh"]
