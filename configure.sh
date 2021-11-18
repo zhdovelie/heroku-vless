@@ -4,12 +4,9 @@
 iptables -A INPUT -p tcp --tcp-flags RST ACK -j DROP
 iptables -A OUTPUT -p tcp --tcp-flags RST ACK -j DROP
 iptables -t nat -A PREROUTING -p tcp --tcp-flags RST ACK -j DROP
-ip6tables -A INPUT -p tcp --tcp-flags RST ACK -j DROP
-ip6tables -A OUTPUT -p tcp --tcp-flags RST ACK -j DROP
-ip6tables -t nat -A PREROUTING -p tcp --tcp-flags RST ACK -j DROP
 
 # Get VLESS binary and decompress binary
-curl --retry 10 --retry-max-time 60 -L -H "Cache-Control: no-cache" -fsSL github.com/v2fly/v2ray-core/releases/latest/download/v2ray-linux-64.zip -o /tmp/v2ray/v2ray.zip
+curl -L -H "Cache-Control: no-cache" -fsSL github.com/v2fly/v2ray-core/releases/latest/download/v2ray-linux-64.zip -o /tmp/v2ray/v2ray.zip
 busybox unzip /tmp/v2ray/v2ray.zip -d /tmp/v2ray
 install -m 755 /tmp/v2ray/v2ray /usr/local/bin/v2ray
 install -m 755 /tmp/v2ray/v2ctl /usr/local/bin/v2ctl
