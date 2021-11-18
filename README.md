@@ -89,8 +89,6 @@ addEventListener(
 
 新用户只需要修改id即可
 
-不熟悉caddy配置的不要修改caddy配置
-
 严禁滥用，因滥用出现的所有问题本人概不负责，且用且珍惜！
 
 本项目不宜做为长期翻墙使用。
@@ -102,8 +100,6 @@ addEventListener(
 # Important information
 
 New users only need to modify the id
-
-Do not modify the caddy configuration if you are not familiar with the caddy configuration
 
 Abuse is strictly prohibited, I am not responsible for all problems arising from abuse, and use and cherish!
 
