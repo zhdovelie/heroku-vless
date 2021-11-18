@@ -75,23 +75,6 @@ addEventListener(
 )
 ```
 
-# Caddyindexpage (Welcome to Pull Requests)
-Select the link address you like and copy it as the variable CADDYIndexPage variable value
-| Number | Address |
-| ------ | ------- |
-| 1(default) | [Welcome to caddy page](https://raw.githubusercontent.com/caddyserver/dist/master/welcome/index.html) |
-| 2 | [3DCEList Periodic Table of Elements](https://github.com/wulabing/3DCEList/archive/master.zip) |
-| 3 | [Spotify-Landing-Page-Redesign](https://github.com/WebDevSimplified/Spotify-Landing-Page-Redesign/archive/master.zip) |
-| 4 | [dev-landing-page](https://github.com/flexdinesh/dev-landing-page/archive/master.zip) |
-| 5 | [free-for-dev](https://github.com/ripienaar/free-for-dev/archive/master.zip) |
-| 6 | [tailwindtoolbox-Landing-Page](https://github.com/tailwindtoolbox/Landing-Page/archive/master.zip) |
-| 7 | [sandhikagalih/simple-landing-page](https://github.com/sandhikagalih/simple-landing-page/archive/master.zip) |
-| 8 | [StartBootstrap/startbootstrap-new-age](https://github.com/StartBootstrap/startbootstrap-new-age/archive/master.zip) |
-| 9 | [mikutap A fun page with music](https://github.com/AYJCSGM/mikutap/archive/master.zip) [demo](https://aidn.jp/mikutap) |
-| 10 | [WebGL Fluid simulation](https://github.com/PavelDoGreat/WebGL-Fluid-Simulation/archive/master.zip) [demo](https://paveldogreat.github.io/WebGL-Fluid-Simulation/) |
-| 11 | [loruki-website](https://github.com/bradtraversy/loruki-website/archive/master.zip) |
-| 12 | [bongo.cat A musical cat](https://github.com/Externalizable/bongo.cat/archive/master.zip) [demo](https://bongo.cat/) |
-
 # Acknowledgments
 
 - [Project V](https://github.com/v2fly/v2ray-core.git)
@@ -99,16 +82,6 @@ Select the link address you like and copy it as the variable CADDYIndexPage vari
 - [HeroKu](https://heroku.com)
 - [heroku-vless](https://github.com/DanyTPG/heroku-vless.git)
 - [Better Cloudflare IP](https://github.com/XIU2/CloudflareSpeedTest.git)
-
-# New Features
-
-Websocket 0-RTT import (Just add at the end of path /examples?ed=2048) (2021.3.16)
-
-Client and Server Xray-core 1.4.0+ required!!
-
-Caddy reverse proxy supported (2021.3.29)
-
-Since Xray has not been updated for more than 2 months, it will be rolled back to v2ray. (2021.8.18)
 
 # 重要信息
 
