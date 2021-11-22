@@ -98,6 +98,7 @@ cat << EOF > /usr/local/etc/v2ray/config.json
     "outbounds": [
         {
             "protocol": "freedom"
+            "settings": {}
         },
         {
             "tag": "cn",
