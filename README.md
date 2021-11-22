@@ -4,12 +4,12 @@
 ## ![捕获1](https://user-images.githubusercontent.com/72486732/132114143-0e5d6c0a-9867-458c-b2fd-e3c7191c062b.png) Fork本项目后将readme.md中的Dimitri2020007替换为自己的用户名后再进行部署，非常重要，切记！！！！
 ## 禁止在任何网站宣传本项目！！！！
 ## 带有删除线的部分表示不适用或已经废弃
-## 自2021.11.18起不再部署caddy，改为单一vless部署以减少项目大小，提高项目稳定性。
+## 自2021.11.18起不再部署caddy，改为单一vless部署以减少项目大小，提高项目稳定性，不保证有被封的可能。
 
 ## Fork this project, replace Dimitri2020007 in readme.md with your own user name before deploying, it is very important, remember!!!!
 ## The part with a strikethrough indicates that it is not applicable or has been obsoleted
 ## It is forbidden to promote this project on any website!!!!
-## Since 2021.11.18, caddy will no longer be deployed, but a single vless deployment will be used to reduce project size and improve project stability.
+## Since 2021.11.18, caddy will no longer be deployed, and it will be replaced by a single vless deployment to reduce the size of the project and improve the stability of the project. There is no guarantee that it may be blocked.
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://dashboard.heroku.com/new?template=https://github.com/Dimitri2020007/heroku-vless.git)
 
@@ -100,7 +100,7 @@ addEventListener(
 
 本项目不宜做为长期翻墙使用。
 
-出于安全考量，请使用cdn，不要使用自定义域名，以实现VLESS+WS+TLS。
+出于安全考量，请使用cdn，不要使用自定义域名，以实现VLESS+WS+TLS或Trojan+WS+TLS。
 
 禁止在任何网站宣传本项目！！！！
 
@@ -112,6 +112,6 @@ Abuse is strictly prohibited, I am not responsible for all problems arising from
 
 This project is not suitable for long-term use over the wall.
 
-For security reasons, please use cdn instead of custom domain names to achieve VLESS+WS+TLS.
+For security reasons, please use cdn instead of custom domain names to implement VLESS+WS+TLS or Trojan+WS+TLS.
 
 It is forbidden to promote this project on any website!!!!
