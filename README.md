@@ -37,6 +37,13 @@
 | `OpenWrt Passwall` | Ws+Tls |
 | ~~`QV2Ray`~~ | ~~Ws+Tls~~ |
 
+# Trojan Ws+Tls Support Status
+| Client | Support Trojan ws+tls? |
+| ------ | ------ |
+| `2dust V2RayN` </br> `2dust V2RayNG` | N/A |
+| `OpenWrt SSRPlus` | Yes |
+| `OpenWrt Passwall` | Yes |
+
 # Cloudflare Reverse Proxy Code (Choose one from both examples)
 
 example 1
