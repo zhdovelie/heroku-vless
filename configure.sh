@@ -39,35 +39,9 @@ cat << EOF > /usr/local/etc/v2ray/config.json
             },
             "streamSettings": {
                 "network": "ws",
-                "security": "none",
                 "allowInsecure": false,
                 "wsSettings": {
                   "path": "/$ID-vless"
-                }
-            }
-        },
-        {   
-            "port": ${PORT},
-            "protocol": "trojan",
-            "sniffing": {
-                "enabled": true,
-                "destOverride": ["http","tls"]
-            },
-            "settings": {
-                "clients": [
-                    {
-                        "password":"$ID",
-                        "email": "love@v2fly.org"
-                    }
-                ],
-                "decryption": "none"
-            },
-            "streamSettings": {
-                "network": "ws",
-                "security": "none",
-                "allowInsecure": false,
-                "wsSettings": {
-                  "path": "/$ID-trojan"
                 }
             }
         }
@@ -92,7 +66,6 @@ cat << EOF > /usr/local/etc/v2ray/config.json
     "outbounds": [
         {
             "protocol": "freedom"
-            "settings": {}
         },
         {
             "tag": "cn",
