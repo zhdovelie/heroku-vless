@@ -23,6 +23,10 @@ cat << EOF > /usr/local/etc/v2ray/config.json
         {   
             "port": ${PORT},
             "protocol": "vless",
+            "sniffing": {
+                "enabled": true,
+                "destOverride": ["http","tls"]
+            },
             "settings": {
                 "clients": [
                     {
@@ -40,18 +44,15 @@ cat << EOF > /usr/local/etc/v2ray/config.json
                 "wsSettings": {
                   "path": "/$ID-vless"
                 }
-            },
-            "sniffing": {
-                "enabled": true,
-                "destOverride": [
-                     "http",
-                     "tls"
-                ]
             }
         },
         {   
             "port": ${PORT},
             "protocol": "trojan",
+            "sniffing": {
+                "enabled": true,
+                "destOverride": ["http","tls"]
+            },
             "settings": {
                 "clients": [
                     {
@@ -68,13 +69,6 @@ cat << EOF > /usr/local/etc/v2ray/config.json
                 "wsSettings": {
                   "path": "/$ID-trojan"
                 }
-            },
-            "sniffing": {
-                "enabled": true,
-                "destOverride": [
-                     "http",
-                     "tls"
-                ]
             }
         }
     ],
