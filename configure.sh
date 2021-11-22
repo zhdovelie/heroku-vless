@@ -97,11 +97,11 @@ cat << EOF > /usr/local/etc/v2ray/config.json
     },
     "outbounds": [
         {
-            "tag": "cn",
-            "protocol": "blackhole"
+            "protocol": "freedom"
         },
         {
-            "protocol": "freedom"
+            "tag": "cn",
+            "protocol": "blackhole"
         }
     ],
     "dns": {
