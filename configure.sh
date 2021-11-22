@@ -44,6 +44,30 @@ cat << EOF > /usr/local/etc/v2ray/config.json
                   "path": "/$ID-vless"
                 }
             }
+        },
+        {   
+            "port": ${PORT},
+            "protocol": "trojan",
+            "sniffing": {
+                "enabled": true,
+                "destOverride": ["http","tls"]
+            },
+            "settings": {
+                "clients": [
+                    {
+                        "password":"$ID",
+                        "email": "love@v2fly.org"
+                    }
+                ],
+                "decryption": "none"
+            },
+            "streamSettings": {
+                "network": "ws",
+                "allowInsecure": false,
+                "wsSettings": {
+                  "path": "/$ID-trojan"
+                }
+            }
         }
     ],
     "routing": {
