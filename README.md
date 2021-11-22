@@ -29,6 +29,17 @@
 | `Transport` | ws |
 | `Tls` | Tls must open, otherwise your network was insecure! |
 
+# Trojan Client Setup
+| Connection Variables | Values |
+| `Address` | yourAppName.herokuapp.com </br> Cloudflare Reverse Proxy IP |
+| `SNI` | Cloudflare Reverse Proxy Domain Name |
+| `Port` | 443 |
+| `Host` | yourAppName.herokuapp.com </br> Cloudflare Reverse Proxy Domain Name |
+| `Path` | /$ID-trojan |
+| `password` | Generate using UUID generator or V2RayN/V2RayNG client generate </br> [uuidgenerator](https://www.uuidgenerator.net/) |
+| `Transport` | ws |
+| `Tls` | Tls must open, otherwise your network was insecure! |
+
 # Client Ws+Tls+Xtls-rprx-direct(Flow) Support Status
 | Client | Status |
 | ------ | ------ |
