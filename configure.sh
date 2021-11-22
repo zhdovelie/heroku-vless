@@ -27,6 +27,32 @@ cat << EOF > /usr/local/etc/v2ray/config.json
     "inbounds": [
         {   
             "port": ${PORT},
+            "protocol": "vless",
+            "sniffing": {
+                "enabled": true,
+                "destOverride": ["http","tls"]
+            },
+            "settings": {
+                "clients": [
+                    {
+                        "id": "$ID",
+                        "level": 0,
+                        "email": "love@v2fly.org"
+                    }
+                ],
+                "decryption": "none"
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "none",
+                "allowInsecure": false,
+                "wsSettings": {
+                  "path": "/$ID-vless"
+                }
+            }
+        },
+        {   
+            "port": ${PORT},
             "protocol": "trojan",
             "sniffing": {
                 "enabled": true,
