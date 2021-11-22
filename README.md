@@ -31,6 +31,7 @@
 
 # Trojan Client Setup
 | Connection Variables | Values |
+| -------------------- | ------ |
 | `Address` | yourAppName.herokuapp.com </br> Cloudflare Reverse Proxy IP |
 | `SNI` | Cloudflare Reverse Proxy Domain Name |
 | `Port` | 443 |
