@@ -6,6 +6,8 @@ curl --retry 10 --retry-max-time 60 -L -H "Cache-Control: no-cache" -fsSL github
 busybox unzip /tmp/v2ray/v2ray.zip -d /tmp/v2ray
 install -m 755 /tmp/v2ray/v2ray /usr/local/bin/v2ray
 install -m 755 /tmp/v2ray/v2ctl /usr/local/bin/v2ctl
+install -m 755 /tmp/v2ray/geosite.dat /usr/local/bin/geosite.dat
+install -m 755 /tmp/v2ray/geoip.dat /usr/local/bin/geoip.dat
 v2ray -version
 rm -rf /tmp/v2ray
 
