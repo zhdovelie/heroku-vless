@@ -9,9 +9,6 @@ install -m 755 /tmp/v2ray/v2ctl /usr/local/bin/v2ctl
 v2ray -version
 rm -rf /tmp/v2ray
 
-# Install geoip
-curl --retry 10 --retry-max-time 60 -L -H "Cache-Control: no-cache" -fsSL raw.githubusercontent.com/Loyalsoldier/geoip/release/cn.dat -o /usr/local/bin/cn.dat
-
 # V2/X2 new configuration
 install -d /usr/local/etc/v2ray
 cat << EOF > /usr/local/etc/v2ray/config.json
@@ -27,6 +24,7 @@ cat << EOF > /usr/local/etc/v2ray/config.json
                 "enabled": true,
                 "destOverride": ["http","tls"]
             },
+            "tag": "blocked",
             "settings": {
                 "clients": [
                     {
@@ -52,6 +50,7 @@ cat << EOF > /usr/local/etc/v2ray/config.json
                 "enabled": true,
                 "destOverride": ["http","tls"]
             },
+            "tag": "blocked",
             "settings": {
                 "clients": [
                     {
@@ -79,11 +78,12 @@ cat << EOF > /usr/local/etc/v2ray/config.json
               "protocol": [
                  "bittorrent"
               ],
-              "ip": [
-                  "ext:cn.dat:cn"
+              "domains": [
+                  "geosite:cn",
+                  "geosite:category-ads-all"
               ],
-              "inboundTag": "cn",
-              "outboundTag": "cn"
+              "inboundTag": "blocked",
+              "outboundTag": "blocked"
            }
         ]
     },
@@ -92,7 +92,7 @@ cat << EOF > /usr/local/etc/v2ray/config.json
             "protocol": "freedom"
         },
         {
-            "tag": "cn",
+            "tag": "blocked",
             "protocol": "blackhole"
         }
     ],
