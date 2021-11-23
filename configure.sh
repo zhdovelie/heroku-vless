@@ -26,7 +26,6 @@ cat << EOF > /usr/local/etc/v2ray/config.json
                 "enabled": true,
                 "destOverride": ["http","tls"]
             },
-            "tag": "blocked",
             "settings": {
                 "clients": [
                     {
@@ -52,7 +51,6 @@ cat << EOF > /usr/local/etc/v2ray/config.json
                 "enabled": true,
                 "destOverride": ["http","tls"]
             },
-            "tag": "blocked",
             "settings": {
                 "clients": [
                     {
@@ -84,7 +82,6 @@ cat << EOF > /usr/local/etc/v2ray/config.json
                   "geosite:cn",
                   "geosite:category-ads-all"
               ],
-              "inboundTag": "blocked",
               "outboundTag": "blocked"
            }
         ]
