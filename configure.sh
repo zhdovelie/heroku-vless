@@ -22,10 +22,6 @@ cat << EOF > /usr/local/etc/v2ray/config.json
         {   
             "port": ${PORT},
             "protocol": "vless",
-            "sniffing": {
-                "enabled": true,
-                "destOverride": ["tls"]
-            },
             "settings": {
                 "clients": [
                     {
@@ -47,10 +43,6 @@ cat << EOF > /usr/local/etc/v2ray/config.json
         {   
             "port": ${PORT},
             "protocol": "trojan",
-            "sniffing": {
-                "enabled": true,
-                "destOverride": ["tls"]
-            },
             "settings": {
                 "clients": [
                     {
@@ -89,18 +81,43 @@ cat << EOF > /usr/local/etc/v2ray/config.json
     },
     "outbounds": [
         {
-            "protocol": "freedom"
+            "protocol": "freedom",
+            "settings": {
+                "domainStrategy": "UseIPv4",
+                "userLevel": 0
+            }
         },
         {
-            "tag": "blocked",
-            "protocol": "blackhole"
+            "protocol": "blackhole",
+            "tag": "blocked"
         }
     ],
     "dns": {
         "servers": [
-            "https://dns.google/dns-query",
-            "https://cloudflare-dns.com/dns-query"
-        ]
+            {
+                "address": "8.8.4.4",
+                "port": 53,
+                "skipFallback": true,
+                "domains": [
+                    "geosite:geolocation-!cn"
+                ],
+                "expectIPs": [
+                    "geoip:cn"
+                ]
+            },
+            {
+                "address": "1.1.1.1",
+                "port": 53,
+                "skipFallback": true,
+                "domains": [
+                    "geosite:geolocation-!cn"
+                ],
+                "expectIPs": [
+                    "geoip:cn"
+                ]
+            }
+        ],
+        "queryStrategy": "UseIPv4"
     }
 }
 EOF
